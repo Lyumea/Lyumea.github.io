@@ -1,3 +1,10 @@
+// Fichiers css
+
+@use 'styles/_colors';
+@use 'styles/mediaQueries';
+
+//Placer tous les medias queries par défaut ici (texte, contener)
+
 .App {
   text-align: center;
 }
@@ -14,18 +21,18 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: var(--Licorice);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: var(--WhitePearl);
 }
 
 .App-link {
-  color: #61dafb;
+  color: var(--Zomp);
 }
 
 @keyframes App-logo-spin {
