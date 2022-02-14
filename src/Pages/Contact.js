@@ -1,10 +1,10 @@
 //import react from "react";
 
-export default function MenuWebProject(){
+export default function Contact(){
     return(
         <div>
             <h1>
-                MenuWebProject
+                Me Contacter
             </h1>
         </div>
     )

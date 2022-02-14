@@ -1,16 +1,25 @@
 //Mise en place des medias Queries
 
-$breackpoints: (phone : 640px,
-                tablet: 768px,
-                desktop: 1024px) !default;
-
-//Exemple d'utilisation
-/* 
-
-@include media(">phone", "<tablet"){
+@mixin xs {
+    @media screen and (max-width : 480px){
+        @content;
+    }
 }
 
-@include media(">tablet", "<950px"){
-
+@mixin sm {
+    @media screen and (max-width : 767px){
+        @content;
+    }
 }
-*/
+
+@mixin md {
+    @media (min-width: 768px) and (max-width: 979px){
+        @content;
+    }
+}
+
+@mixin xl {
+    @media screen and (max-width : 1200px){
+        @content;
+    }
+}

@@ -33,8 +33,6 @@ body {
   margin: 0;
   font-family: Aileron-Heavy, Aileron, Aileron-Light,
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 code {
