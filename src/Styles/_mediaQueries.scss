@@ -1,0 +1,25 @@
+//Mise en place des medias Queries
+
+@mixin xs {
+    @media screen and (max-width : 480px){
+        @content;
+    }
+}
+
+@mixin sm {
+    @media screen and (max-width : 767px){
+        @content;
+    }
+}
+
+@mixin md {
+    @media (min-width: 768px) and (max-width: 979px){
+        @content;
+    }
+}
+
+@mixin xl {
+    @media screen and (max-width : 1200px){
+        @content;
+    }
+}

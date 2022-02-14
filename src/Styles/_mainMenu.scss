@@ -1,0 +1,94 @@
+//Menu 
+
+.menu-btn{
+    position: fixed;
+    top : 6rem;
+    right : 6rem;
+    border-radius : 50%;
+    height : 5rem;
+    width : 5rem;
+    cursor : pointer;
+    z-index : 1000;
+    color: var(--Zomp);
+    border: solid var(--Zomp);
+    text-align: center;
+}
+
+.nav-bg{
+    position: fixed;
+    top: 5.5rem;
+    right: 5.5rem;
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    background-color: var(--Mint);
+    background: linear-gradient(-45deg, var(--AquaMarine), var(--Zomp));
+    background-size: 400% 400%;
+    animation: gradient 30s ease infinite;
+}
+
+
+.menu-icon{
+    background-color: var(--Zomp);
+    width: 2.5rem;
+    height: 2px;
+    display: inline-block;
+    position: relative;
+    margin-top: 2.5rem;
+    transition: all 0.3s;
+
+    &::after,
+    &::before{
+        content: "";
+        background-color: var(--Zomp);
+        width: 2.5rem;
+        height: 2px;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        transition: all .3s;
+    }
+}
+
+.menu-nav{
+    position:fixed;
+    top:0;
+    right: 0;
+    z-index: 600;
+    transition: all 1s ease-in-out;
+    width: 100%;
+
+    .menu-list{
+        position: absolute;
+        list-style: none;
+        top : 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+    }
+
+
+    .menu-item{
+        display: inline-block;
+        font-size: 2rem;
+        font-family: Aileron-Light;
+        text-decoration: none;
+        color: var(--WhitePearl);
+        padding: 1rem 2rem;
+        background-image: linear-gradient(120deg,transparent 0%, transparent 50%, var(--WhitePearl) 50%);
+        background-size: 240%;
+        transition: all 0.4s;
+
+        &:hover, &:active{
+            background-position: 100%;
+            color: var(--Licorice);
+            transform: translateX(1rem);
+        }
+    }
+
+}
+
+
+
+
+
