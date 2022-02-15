@@ -9,8 +9,8 @@
     width : 5rem;
     cursor : pointer;
     z-index : 1000;
-    color: var(--Zomp);
-    border: solid var(--Zomp);
+    color: var(--WhitePearl);
+    border: solid var(--WhitePearl);
     text-align: center;
 }
 
@@ -29,7 +29,7 @@
 
 
 .menu-icon{
-    background-color: var(--Zomp);
+    background-color: var(--WhitePearl);
     width: 2.5rem;
     height: 2px;
     display: inline-block;
@@ -40,7 +40,7 @@
     &::after,
     &::before{
         content: "";
-        background-color: var(--Zomp);
+        background-color: var(--WhitePearl);
         width: 2.5rem;
         height: 2px;
         display: inline-block;
@@ -87,8 +87,3 @@
     }
 
 }
-
-
-
-
-

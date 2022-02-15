@@ -8,7 +8,7 @@ transition : transform 1s;
 `;
 
 const Icon = styled.span`
-background-color : ${(props) => props.clicked ? "transparent" : "#339999"};
+background-color : ${(props) => props.clicked ? "transparent" : "#f8f6f0"};
 
 &::before{
     top: ${(props) => props.clicked ? "0" : "-0.8rem !important"};

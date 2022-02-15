@@ -4,6 +4,8 @@
 @use 'styles/mediaQueries';
 @use 'styles/mainMenu';
 @use 'styles/animations';
+@use 'styles/cloud';
+@use 'styles/home';
 
 //Placer tous les medias queries par défaut ici (texte, contener)
 
@@ -11,7 +13,15 @@
   text-align: center;
 }
 
-.App-logo {
+.container{
+  margin: 0 10rem;
+}
+
+h1{
+  font-size: 5rem;
+}
+
+/*.App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -45,3 +55,4 @@
     transform: rotate(360deg);
   }
 }
+*/
