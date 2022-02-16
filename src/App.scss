@@ -13,6 +13,10 @@
   text-align: center;
 }
 
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
 .container{
   margin: 0 10rem;
 }

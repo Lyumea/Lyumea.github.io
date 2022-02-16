@@ -4,11 +4,23 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    background-color: var(--Zomp);
+    background-color: mix( #339999, #f8f6f0, 50%);
     height: 100vh;
 
-    h1{
-        color: var(--WhitePearl);
+    .home-main-title{
+        color: mix( #339999, #f8f6f0, 50%);
+        position: absolute;
+        width: 100%;
+        font-size: 10rem;
+        text-shadow: 
+        -0.0075em 0.0075em .5rem mix(#f8f6f0, #339999, 94%),
+        0.005em 0.005em .5rem mix(#f8f6f0, #339999, 60%),
+        0.01em 0.01em .5rem mix(#f8f6f0, #339999, 62%), 
+        0.015em 0.015em mix(#f8f6f0, #339999, 64%), 
+        0.02em 0.02em .5rem mix(#f8f6f0, #339999, 66%), 
+        0.025em 0.025em .5rem mix(#f8f6f0, #339999, 68%),
+        0.03em 0.03em .5rem mix(#f8f6f0, #339999, 70%),
+        0.035em 0.035em .5rem mix(#f8f6f0, #339999, 72%);
     }
 
     .home-cloud{
