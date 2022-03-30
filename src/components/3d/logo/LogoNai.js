@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import React, { Suspense } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 import { Canvas, useFrame} from '@react-three/fiber';
 import { useGLTF } from '@react-three/drei';
 import test from './logo.gltf';
@@ -28,9 +28,21 @@ function Logo({ ...props }) {
 
 export default function LogoNai() {
 
+    const [getLogo, setLogo] = useState(false);
+    useEffect(() => {
+        setTimeout( () => setLogo(true), 500);
+    }, [] );
+
+    if(!getLogo){
+        return null;
+    }
+
+    else{
+
     return (
         <Canvas
             mode="concurrent"
+            className="Dlogo"
             style={{height:"100vh"}}
             camera={{ position: [2, 1, -2] , fov: 45 }}>
             <ambientLight intensity={0.7} />
@@ -40,4 +52,5 @@ export default function LogoNai() {
             </Suspense>
         </Canvas>
     )
+    }
 }

@@ -6,6 +6,7 @@
     justify-content: space-around;
     background-color: mix( #339999, #f8f6f0, 50%);
     height: 100vh;
+    animation: appear 1s linear;
 
     .home-main-title{
         color: mix( #339999, #f8f6f0, 50%);
@@ -21,10 +22,18 @@
         0.025em 0.025em .5rem mix(#f8f6f0, #339999, 68%),
         0.03em 0.03em .5rem mix(#f8f6f0, #339999, 70%),
         0.035em 0.035em .5rem mix(#f8f6f0, #339999, 72%);
+
+        @media screen and (max-width : 767px){
+            &{
+                font-size: 6rem;
+                line-height: 15rem;
+            }
+        }
     }
 
     .home-cloud{
         position: absolute;
         bottom: -10rem;
     }
+
 }

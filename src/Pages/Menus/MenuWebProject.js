@@ -2,10 +2,12 @@
 
 export default function MenuWebProject(){
     return(
-        <div>
-            <h1>
-                MenuWebProject
-            </h1>
+        <div className="MenuWP">
+            <div className="container">
+                <h1>
+                    Mes Projets WEB
+                </h1>
+            </div>
         </div>
     )
 }

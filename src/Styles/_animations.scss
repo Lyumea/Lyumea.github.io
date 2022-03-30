@@ -10,3 +10,41 @@
       background-position: 0 50%;
     }
   }
+
+  //form
+  @keyframes inputHighlighter {
+    from{ background: var(--AquaMarine);}
+    to { width: 0; background: transparent;}
+  }
+
+  //drop
+  @keyframes drop{
+    0%{
+      top: 100%;
+    }
+    100%{
+      top:-50%;
+    }
+  }
+
+  //classic
+
+ @keyframes fade-in{
+   from{
+     transform: translate3d(0, 10px, 0);
+     opacity: 0;
+   }
+   to{
+     transform: translate3d(0, 0 ,0);
+     opacity: 1;
+   }
+ }
+
+ @keyframes appear {
+   from{
+     opacity: 0;
+   }
+   to{
+     opacity: 1;
+   }
+ }

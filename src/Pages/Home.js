@@ -1,6 +1,7 @@
 //import react from "react";
 import LogoNai from "../components/3d/logo/LogoNai";
 import Clouds from "./../components/Clouds";
+import "../Styles/_mixins.scss";
 
 export default function Home(){
     return(

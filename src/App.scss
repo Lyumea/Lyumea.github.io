@@ -1,11 +1,13 @@
 // Fichiers css
 
 @use 'styles/_colors';
-@use 'styles/mediaQueries';
+@use 'styles/mixins';
 @use 'styles/mainMenu';
 @use 'styles/animations';
 @use 'styles/cloud';
 @use 'styles/home';
+@use 'styles/contact';
+@use 'styles/menuWP';
 
 //Placer tous les medias queries par défaut ici (texte, contener)
 
@@ -15,10 +17,12 @@
 
 *, *::before, *::after{
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .container{
-  margin: 0 10rem;
+  margin: 0 10rem 0 10rem;
 }
 
 h1{

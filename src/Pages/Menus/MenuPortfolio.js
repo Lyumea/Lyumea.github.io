@@ -1,6 +1,6 @@
 //import react from "react";
 
-export default function MenuWebProject(){
+export default function MenuPortfolio(){
     return(
         <div>
             <h1>
