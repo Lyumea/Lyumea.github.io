@@ -31,9 +31,9 @@ const Slider = ({images}) => {
           </ul>
           <div className="slider--content container">
             <div className="slider--feature">
-              <h1 ref={slideText} className="feature--title"></h1>
-             <img className="slider-logo" ref={slideLogo} />
-              <p ref={slideDesc} className="feature--text"></p>
+              <h1 ref={slideText} className="feature--title"> </h1>
+             <img className="slider-logo" alt="" ref={slideLogo} />
+              <p ref={slideDesc} className="feature--text"> </p>
              <ul className="slider-tech" ref={slideTech}>
                 
               </ul>

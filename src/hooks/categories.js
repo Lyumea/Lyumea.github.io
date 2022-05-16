@@ -1,4 +1,4 @@
-export default [
+ let catetories = [
     {
         id : "01",
         text : "2D",
@@ -41,3 +41,5 @@ export default [
         ]
     }
 ]
+
+export default catetories;

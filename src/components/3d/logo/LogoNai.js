@@ -30,7 +30,10 @@ export default function LogoNai() {
 
     const [getLogo, setLogo] = useState(false);
     useEffect(() => {
-        setTimeout( () => setLogo(true), 500);
+        //setTimeout( () => setLogo(true), 500);
+        window.addEventListener('load', () => {
+            setLogo(true);
+        })
     }, [] );
 
     if(!getLogo){

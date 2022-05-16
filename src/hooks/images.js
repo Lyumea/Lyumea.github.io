@@ -1,4 +1,4 @@
-export default [
+let images = [
     {   
         id : "01",
         src : "https://cdn.discordapp.com/attachments/966254135601160212/967093443694313553/aud-bg.png",
@@ -57,3 +57,5 @@ export default [
         ]
     }
 ]
+
+export default images;

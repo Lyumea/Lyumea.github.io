@@ -43,9 +43,9 @@ const SliderPortfolio = ({categories}) =>{
             <ul className="slider-tech" ref={slideTech}>
                 
             </ul>
-              <h1 ref={slideText} className="feature--title"></h1>
-             <img className="slider-logo" ref={slideLogo} />
-              <p ref={slideDesc} className="feature--text"></p>
+              <h1 ref={slideText} className="feature--title"> </h1>
+             <img className="slider-logo" ref={slideLogo} alt="" />
+              <p ref={slideDesc} className="feature--text"> </p>
               <button> 	&#8595; </button>
             </div>
           </div>
