@@ -1,4 +1,5 @@
 //import react from "react";
+import plane from "../assets/img/icons/paper-plane-lin.svg";
 
 export default function Contact(){
     return(
@@ -38,7 +39,9 @@ export default function Contact(){
                 </div>
 
                 <div>
-                    <button><span> Envoyer </span></button>
+                    {/* <button><span> Envoyer </span></button> */}
+                    <button> <span> Envoyer </span> <img src={plane} alt="" /> </button>
+                    
                 </div>
             </form>
         </div>

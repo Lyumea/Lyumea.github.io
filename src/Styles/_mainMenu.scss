@@ -1,4 +1,5 @@
 //Menu 
+@import "mixins";
 
 .menu-btn{
     position: fixed;
@@ -10,13 +11,30 @@
     cursor : pointer;
     z-index : 1000;
     color: var(--WhitePearl);
-    border: solid var(--WhitePearl);
-    background-color: var(--BlueGreen);
+    border: solid var(--WhitePearl) 1px;
+    background-color: rgba($color: #96c8c5, $alpha: .5);
     text-align: center;
-    @media screen and (max-width : 767px){
-        &{
-            top : 3rem;
-            right : 3rem;
+    @include md{
+        top : 3rem;
+        right : 3rem;
+    }
+    @include sm{
+        top : 4rem;
+        right : 4rem;
+        height : 4rem;
+        width : 4rem;
+    }
+
+    &:hover{
+        .menu-icon::before, .menu-icon::after{
+            width: 2.5rem;
+            @include sm{
+                width: 2rem;
+            }
+        }
+
+        .menu-icon{
+            margin-left: 0;
         }
     }
 }
@@ -37,6 +55,14 @@
             right : 3.5rem;
         }
     }
+
+    @include sm{
+        top : 2.5rem;
+        right : 2.5rem;
+        height : 5rem;
+        width : 5rem;
+        
+    }
 }
 
 
@@ -48,6 +74,13 @@
     position: relative;
     margin-top: 2.5rem;
     transition: all 0.3s;
+    margin-left: .5rem;
+
+    @include sm{
+        margin-top: 2rem;
+        width: 2rem;
+        
+    }
 
     &::after,
     &::before{
@@ -59,6 +92,7 @@
         position: absolute;
         left: 0;
         transition: all .3s;
+        width: 1rem;
     }
 }
 

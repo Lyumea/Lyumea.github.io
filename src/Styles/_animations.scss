@@ -10,13 +10,11 @@
       background-position: 0 50%;
     }
   }
-
   //form
   @keyframes inputHighlighter {
     from{ background: var(--AquaMarine);}
     to { width: 0; background: transparent;}
   }
-
   //drop
   @keyframes drop{
     0%{
@@ -26,25 +24,64 @@
       top:-50%;
     }
   }
-
   //classic
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-5vw);
+    }
 
- @keyframes fade-in{
-   from{
-     transform: translate3d(0, 10px, 0);
-     opacity: 0;
-   }
-   to{
-     transform: translate3d(0, 0 ,0);
-     opacity: 1;
-   }
- }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  .fadeIn {
+    animation: fadeIn 1s;
+  }
+  .fade-in-out{
+    animation: var(--anim-basic);
+  }
+  .fade-in-down{
+    animation: var(--anim-basic-down);
+  }
+  @keyframes fade-in-up {
+    0%{
+      transform: translateY(5rem);
+      opacity: 0;
+    }
+    100%{
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in-down {
+    0%{
+      transform: translateY(-5rem);
+      opacity: 0;
+    }
+    100%{
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
 
- @keyframes appear {
-   from{
-     opacity: 0;
-   }
-   to{
-     opacity: 1;
-   }
- }
+ //carrés
+ @keyframes squares { 
+  0% { transform: translateY(100%) rotate(-50deg); background-color: var(--BlueGreen);}
+  50% { background-color: var(--WhitePearl) }
+  100%   { transform: translateY(calc(-100vh + -100%)) rotate(20deg) }
+}
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+

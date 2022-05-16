@@ -1,3 +1,4 @@
+@import "mixins";
 .contact{
     margin: 0;
     padding: 0;
@@ -9,6 +10,10 @@
     display: flex;
     justify-content: space-around;  
     align-items: center;
+
+    @include sm{
+        justify-content: space-between;  
+    }
 
     .contact-form{
         display: flex;
@@ -42,21 +47,24 @@
                 font-family: Aileron-Thin;
                 letter-spacing: 1px;
                 margin-bottom: 1rem;
-                @media screen and (max-width : 767px){
-                    &{
-                        display: none;
-                    }
-                }
+                text-align: left;
             }
 
         }
     }
 
     form{
-        @media screen and (max-width : 767px){
-            &{
-                margin-top: 3rem;
-            }
+        width: 30%;
+        margin-top: 5rem;
+        
+        @include md{
+            margin-top: 2.5rem;
+            width: 40%;
+        }
+
+        @include sm{
+            margin-top: 6rem;
+            width: 100%;
         }
     }
 
@@ -66,8 +74,8 @@
     }
 
     input, textarea{
-        font-size: 18px;
-        font-family: Aileron;
+        font-size: 1rem;
+        font-family: Aileron-Light;
         padding: 10px 10px 10px 5px;
         display: block;
         width: 100%;
@@ -149,6 +157,7 @@
         color: var(--Zomp);
         border-radius: .15rem;
         transition: all .5s ease;
+        overflow: hidden;
         
         &::before{
             content: "Envoyer";
@@ -160,15 +169,45 @@
             position: absolute;
             background-color: var(--WhitePearl);
             top: 5%;
-            left: 2.5%;
-            width: 95%;
+            left: 2%;
+            width: 96%;
             height: 90%;
             border-radius: .15rem;
+            transition: all .5s ease;
+            vertical-align: center;
+            z-index: 1;
         }
 
-        &:hover ~ button::before, &:focus ~ button::before{
-            width: 0;
-            height: 0;
+        &:hover, &:focus{
+            &::before{
+                width: 0;
+                height: 0;
+                left: 50%;
+                opacity: 0;
+                content: '';
+                border-radius: 100px;
+            }
+            
+            &{
+                img{
+                    left: 1.8rem;
+                    top : .15rem;
+                }
+            }
+        }
+
+        img{
+            position: absolute;
+            left: 0;
+            top : 3rem;
+            width: 1.8rem;
+            z-index: 0;
+            transition: all .5s ease;
+
+        }
+
+        span{
+            visibility: hidden;
         }
 
     }

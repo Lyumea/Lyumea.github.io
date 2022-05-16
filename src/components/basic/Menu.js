@@ -9,6 +9,11 @@ transition : transform 1s;
 
 const Icon = styled.span`
 background-color : ${(props) => props.clicked ? "transparent" : "#f8f6f0"};
+margin-left : ${(props) => props.clicked ? "1.5rem" : "0"};
+@media screen and (max-width : 767px){
+    margin-left : ${(props) => props.clicked ? "1rem" : "0"};
+}
+
 
 &::before{
     top: ${(props) => props.clicked ? "0" : "-0.8rem !important"};
