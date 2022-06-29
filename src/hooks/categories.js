@@ -1,9 +1,9 @@
- let catetories = [
+ const catetories = [
     {
         id : "01",
         text : "2D",
-        desc : "Logos et illustrations vectorielles ou bitmap",
-        src : "",
+        desc : "Logos, illustrations vectorielles ou bitmap",
+        src : "https://cdn.discordapp.com/attachments/966254135601160212/986613537130553384/idvisuel2.png",
         logo : "",
         tech : [
             '<li> <img src="assets/svg/icons/adobe-illustrator.svg" /> </li>',
@@ -24,7 +24,7 @@
         id : "03",
         text : "Print",
         desc : "Mon portfolio print, affiches et flyers",
-        src : "",
+        src : require("../assets/img/bg/book/nai-portfolio.jpg"),
         logo : "",
         tech : ["Indesign"]
     },
@@ -33,11 +33,11 @@
         id : "04",
         text : "Vidéos",
         desc : "Animation et montage vidéo",
-        src : "https://cdn.discordapp.com/attachments/964061387859046400/971053771331362876/4.gif",
+        src : require("../assets/gif/8.gif"),
         logo : "",
         tech: [
             '<li> <img src="assets/svg/icons/adobe-premiere-pro.svg" /> </li>',
-            '<li> <img src="assets/svg/icons/adobe-after-effects.svg" /> </li>'
+            '<li> <img src="assets/svg/icons/adobe-after-effects.svg" alt="Icone du logiciel Adobe : After Effecs" /> </li>'
         ]
     }
 ]

@@ -1,5 +1,5 @@
 import React, {useRef} from "react";
-import useSlider from "../../hooks/useSlider";
+import useSliderPortfolio from "../../hooks/useSliderPortfolio";
 
 const SliderPortfolio = ({categories}) =>{
     const slideImage = useRef(null);
@@ -9,7 +9,7 @@ const SliderPortfolio = ({categories}) =>{
     const slideNav = useRef(null);
     const slideLogo = useRef(null);
 
-    const {useNav, goToPreviousSlide, goToNextSlide} = useSlider(
+    const {useNav, goToPreviousSlide, goToNextSlide} = useSliderPortfolio(
         slideImage,
         slideText,
         slideDesc,

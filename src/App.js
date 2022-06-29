@@ -9,6 +9,7 @@ import Contact from './Pages/Contact';
 
 
 
+
 function App() {
   return (
     <div className="App">
@@ -21,7 +22,7 @@ function App() {
         <Route path="/portfolio" element={ <MenuPortfolio /> } />
         <Route path="/contact" element={ <Contact /> } />
       </Routes>
-     
+
 
     </div>
   );

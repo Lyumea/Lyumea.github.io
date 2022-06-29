@@ -1,46 +1,38 @@
 import {useEffect} from 'react';
 
 //utilisation des slides
-const useSlider = (slideImage, slideText, slideDesc, slideTech, slideNav, slideLogo, images) => {
+const useSlider = (slideImage, slideText, slideDesc, slideTech, slideNav, slideLogo, images ) => {
     let slideCounter = 0;
-
+  
     useEffect( () => {
         startSlider();
-    
-    });
+    }, []);
 
-    //mise en place du slide avec l'image en fond
+    //mise en place de la première slide
     const startSlider =() => {
-
         slideImage.current.style.backgroundImage =  `linear-gradient(
             to right,
             rgba(255, 241, 235, 0.9),
             rgba(255, 241, 235, 0.3)
-            ), url(${images[0].src})`;
+            ), url(${images[slideCounter].src})`;
         slideImage.current.style.backgroundPosition = `right bottom`;
         slideImage.current.style.backgroundSize = `cover`;
         slideImage.current.style.backgroundRepeat = `no-repeat`;
-
-            slideText.current.innerHTML = images[0].text;
-            slideDesc.current.innerHTML = images[0].desc;
-            slideTech.current.innerHTML = images[0].tech.join('');
-            slideNav.current.childNodes[0].style.color = `#544147`;
-            slideNav.current.childNodes[0].style.transition = `all .5s ease`;
-            slideLogo.current.src = images[0].logo;
-
+        slideText.current.innerHTML = images[slideCounter].text;
+        slideDesc.current.innerHTML = images[slideCounter].desc;
+        slideTech.current.innerHTML = images[slideCounter].tech.join('');
+        slideNav.current.childNodes[slideCounter].style.color = `#544147`;
+        slideNav.current.childNodes[slideCounter].style.transition = `all .5s ease`;
+        slideLogo.current.src = images[slideCounter].logo;
     }
-
+    //gestion de la navigation
     const useNav = event => {
         slideCounter = event.target.textContent;
         handleSlide(event.target.textContent);
         let selected = slideNav.current.childNodes[slideCounter-1];
         (selected.style.color === `#544147`) ? (selected.style.color = `transparent`) : (selected.style.color = `#544147`);
         slideNav.current.childNodes[0].style.transition = `all .5s ease`;
-        //selected.style.color = `#544147`;
-        //console.log(selected);
-        //const tech = images[listContent-1].tech;
     }
-
 
     //paramètre changement de slide
     const handleSlide = slide => {
@@ -53,13 +45,8 @@ const useSlider = (slideImage, slideText, slideDesc, slideTech, slideNav, slideL
             slideText.current.innerHTML = images[slide - 1].text;
             slideDesc.current.innerHTML = images[slide - 1].desc;
             slideTech.current.innerHTML = images[slide - 1].tech.join('');
-
-            //console.log(slide-1);
-            //console.log(images[slide-1].id-1);
             slideNav.current.childNodes[slide - 1].style.transition = `all .5s ease`;
             slideLogo.current.src = images[slide - 1].logo;
-
-         
             animateSlide(slideImage)
     }
 
@@ -97,7 +84,7 @@ const useSlider = (slideImage, slideText, slideDesc, slideTech, slideNav, slideL
             slideDesc.current.classList.remove("fade-in-out");
         },2000 )
     }
-
+    //slide suivante
     const goToPreviousSlide = () => {
 
         if (slideCounter === 0) {
@@ -107,7 +94,7 @@ const useSlider = (slideImage, slideText, slideDesc, slideTech, slideNav, slideL
         handleSlide(slideCounter)
         slideCounter--;
         }
-
+    //slide précédante
     const goToNextSlide = () => {
         if (slideCounter === images.length - 1) {
           startSlider()
@@ -128,7 +115,7 @@ const useSlider = (slideImage, slideText, slideDesc, slideTech, slideNav, slideL
             slideCounter++;
             animateSlide(slideImage)
     }
-
+    //valeurs/fonction à retourner si besoin
     return { goToPreviousSlide, goToNextSlide, useNav}
 }
 export default useSlider

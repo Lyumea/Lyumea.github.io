@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import React, { Suspense, useEffect, useState } from 'react';
+import React, { Suspense } from 'react';
 import { Canvas, useFrame} from '@react-three/fiber';
 import { useGLTF } from '@react-three/drei';
 import test from './logo.gltf';
@@ -16,7 +16,6 @@ function Logo({ ...props }) {
        group.current.position.y = THREE.MathUtils.lerp(group.current.position.y,  (-2 + Math.sin(t)) / 3 , 1);
     });
 
-
     return (
         <group ref={group} {...props} dispose={null} >
             <mesh geometry={nodes.logo.geometry} material={materials.white} position={[0, 0, 0]} rotation={[0, 1.2, 0]} />
@@ -25,22 +24,7 @@ function Logo({ ...props }) {
 }
 
 
-
 export default function LogoNai() {
-
-    const [getLogo, setLogo] = useState(false);
-    useEffect(() => {
-        //setTimeout( () => setLogo(true), 500);
-        window.addEventListener('load', () => {
-            setLogo(true);
-        })
-    }, [] );
-
-    if(!getLogo){
-        return null;
-    }
-
-    else{
 
     return (
         <Canvas
@@ -55,5 +39,5 @@ export default function LogoNai() {
             </Suspense>
         </Canvas>
     )
-    }
+
 }

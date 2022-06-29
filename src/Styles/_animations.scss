@@ -85,3 +85,15 @@
 	}
 }
 
+@keyframes float2 {
+	0% {
+		transform: translatey(10rem) rotate(-20deg);
+	}
+	50% {
+		transform: translatey(-10rem);
+	}
+	100% {
+		transform: translatey(10rem) rotate(-20deg);
+	}
+}
+
