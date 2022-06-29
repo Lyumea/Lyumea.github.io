@@ -1,9 +1,16 @@
 // Fichiers css
-
 @use 'styles/_colors';
-@use 'styles/mediaQueries';
+@use 'styles/mixins';
 @use 'styles/mainMenu';
 @use 'styles/animations';
+@use 'styles/cloud';
+@use 'styles/home';
+@use 'styles/contact';
+@use 'styles/menuWP';
+@use 'styles/menuPortfolio';
+
+@import "styles/mixins";
+
 
 //Placer tous les medias queries par défaut ici (texte, contener)
 
@@ -11,7 +18,52 @@
   text-align: center;
 }
 
-.App-logo {
+*, *::before, *::after{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  margin: 0 10rem 0 10rem;
+  @include sm{
+    margin: 0 5rem 0 5rem;
+  }
+
+  @include xs{
+    margin: 0 1rem 0 1rem;
+  }
+}
+
+h1{
+  font-size: 5rem;
+  @include sm{
+    font-size: 4rem;
+  }
+
+  @include xs{
+    font-size: 2.5rem;
+  }
+}
+
+h2{
+  color: var(--Licorice);
+}
+
+.loading-container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img{
+    transition: all .5s ease-in-out;
+    width: 25rem;
+    animation: float2 10s ease-in-out infinite;
+  }
+}
+
+/*.App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -45,3 +97,4 @@
     transform: rotate(360deg);
   }
 }
+*/

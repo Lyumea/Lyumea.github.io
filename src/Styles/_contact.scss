@@ -1,0 +1,263 @@
+@import "mixins";
+.contact{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--WhitePearl);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;  
+    align-items: center;
+
+    @include sm{
+        justify-content: space-between;  
+    }
+
+    .contact-form{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        z-index: 1;
+        div:first-child{
+
+            h1{
+                position: relative;
+                text-align: left;
+                @media screen and (max-width : 767px){
+                    &{
+                        font-size: 3rem;
+                    }
+                }
+                &::before{
+                    content: "";
+                    position: absolute;
+                    width: 70%;
+                    bottom: 0;
+                    height: 2px;
+                    background-color: var(--Zomp);
+                }
+            }
+    
+            p{
+                margin-top: 1rem;
+                font-family: Aileron-Thin;
+                letter-spacing: 1px;
+                margin-bottom: 1rem;
+                text-align: left;
+            }
+
+        }
+    }
+
+    form{
+        width: 30%;
+        margin-top: 5rem;
+        
+        @include md{
+            margin-top: 2.5rem;
+            width: 40%;
+        }
+
+        @include sm{
+            margin-top: 6rem;
+            width: 100%;
+        }
+    }
+
+    .group{
+        position: relative;
+        margin-bottom: 45px;
+    }
+
+    input, textarea{
+        font-size: 1rem;
+        font-family: Aileron-Light;
+        padding: 10px 10px 10px 5px;
+        display: block;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid var(--Zomp);
+        background: none;
+        &:focus{
+            outline: none;
+        }
+
+        &:focus ~ label, &:valid ~ label{
+            top: -20px;
+            font-size: 14px;
+            color : var(--Licorice);
+            letter-spacing: 1px;
+        }
+
+        &:focus ~ bar::before, &:focus ~ .bar::after{
+            width: 100%;
+        }
+
+        &:focus ~ .highlight{
+            animation: inputHighlighter 0.3s ease;
+        }
+    }
+
+    label{
+        color: var(--MyGray);
+        position: absolute;
+        pointer-events: none;
+        left: 5px;
+        top: 10px;
+        transition: 0.4s ease all;
+        font-family: Aileron-Light;
+        letter-spacing: 1px;
+    }
+
+    .bar{
+        position: relative;
+        display: block;
+        width: 100%;
+
+        &::before{
+            left: 0;
+        }
+
+        &::after{
+            right: 0;
+        }
+
+        &::before, &::after{
+            content: '';
+            height: 2px;
+            width: 0;
+            position: absolute;
+            background: var(--Zomp);
+            transition: 0.4s ease all;
+        }
+    }
+
+    .highlight{
+        position: absolute;
+        height: 60%;
+        width: 100%;
+        top: 25%;
+        left: 0;
+        pointer-events: none;
+        opacity: 0.5;
+    }
+
+    button{
+        position: relative;
+        border: none;
+        background: linear-gradient(45deg, var(--Zomp), var(--AquaMarine));
+        background-size: 400% 400%;
+        animation: gradient 10s ease infinite;
+        padding: .6rem 1.5rem;
+        cursor: pointer;
+        color: var(--Zomp);
+        border-radius: .15rem;
+        transition: all .5s ease;
+        overflow: hidden;
+        
+        &::before{
+            content: "Envoyer";
+            font-family: var(--Regular);
+            color: var(--Zomp);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            background-color: var(--WhitePearl);
+            top: 5%;
+            left: 2%;
+            width: 96%;
+            height: 90%;
+            border-radius: .15rem;
+            transition: all .5s ease;
+            vertical-align: center;
+            z-index: 1;
+        }
+
+        &:hover, &:focus{
+            &::before{
+                width: 0;
+                height: 0;
+                left: 50%;
+                opacity: 0;
+                content: '';
+                border-radius: 100px;
+            }
+            
+            &{
+                img{
+                    left: 1.8rem;
+                    top : .15rem;
+                }
+            }
+        }
+
+        img{
+            position: absolute;
+            left: 0;
+            top : 3rem;
+            width: 1.8rem;
+            z-index: 0;
+            transition: all .5s ease;
+
+        }
+
+        span{
+            visibility: hidden;
+        }
+
+    }
+}
+
+.lines{
+    height: 100%;
+    color: var(--WhitePearl);
+    line-height: 1.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+
+    .line{
+        position: absolute;
+        width: 1px;
+        height: 100%;
+        top : 0;
+        left: 50%;
+        background: rgba(var(--Zomp) 0.1);
+        overflow: hidden;
+
+        &::after{
+            content: '';
+            display: block;
+            position: absolute;
+            height: 15vh;
+            width: 100%;
+            top: -50%;
+            left: 0;
+            background: linear-gradient(to top, rgba(255,255,255,0) 0%, var(--Licorice) 75%, var(--Licorice) 100%);
+            animation: drop 7s 0s infinite;
+            animation-fill-mode: forwards;
+            animation-timing-function: cubic-bezier(0.4,0.26,0,0.97);
+        }
+
+        &:nth-child(1){
+            margin-left:-25%;
+            &::after{
+                animation-delay: 2s;
+            }
+        }
+
+        &:nth-child(3){
+            margin-left:25%;
+            &::after{
+                animation-delay: 2.5s;
+            }
+        }
+    }
+}

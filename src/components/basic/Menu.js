@@ -8,7 +8,12 @@ transition : transform 1s;
 `;
 
 const Icon = styled.span`
-background-color : ${(props) => props.clicked ? "transparent" : "#339999"};
+background-color : ${(props) => props.clicked ? "transparent" : "#f8f6f0"};
+margin-left : ${(props) => props.clicked ? "1.5rem" : "0"};
+@media screen and (max-width : 767px){
+    margin-left : ${(props) => props.clicked ? "1rem" : "0"};
+}
+
 
 &::before{
     top: ${(props) => props.clicked ? "0" : "-0.8rem !important"};
@@ -23,6 +28,7 @@ background-color : ${(props) => props.clicked ? "transparent" : "#339999"};
 
 const Navigation = styled.nav`
     height: ${(props) => (props.clicked ? "100vh": "0")};
+    top: ${(props) => (props.clicked ? "0": "-20%")};
     opacity: ${(props) => (props.clicked ? "1": "0")};
 `;
 
@@ -45,10 +51,14 @@ function Menu() {
 
     <Navigation clicked={click} className="menu-nav">
         <List className='menu-list'>
+            <div>
             <li> <ItemLink className="menu-item" onClick={HandleClick} to="/"> Accueil </ItemLink> </li>
             <li> <ItemLink className="menu-item" onClick={HandleClick} to="/web-projects"> Projets WEB </ItemLink> </li>
+            </div>
+            <div>
             <li> <ItemLink className="menu-item" onClick={HandleClick} to="/portfolio"> Portfolio </ItemLink> </li>
             <li> <ItemLink className="menu-item" onClick={HandleClick} to="/contact"> Me Contacter </ItemLink> </li>
+            </div>
         </List>
     </Navigation>
     

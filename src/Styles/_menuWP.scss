@@ -1,0 +1,358 @@
+@import "mixins";
+/* MENU WEB PROJECTS */
+.MenuWP{
+    background-color: var(--WhitePearl);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    overflow: hidden;
+
+    //partie slider
+    .slider-container{
+        width: 100%;
+    }
+
+    .slider {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+
+
+        .slider-bg{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+
+            @media screen and (max-width : 1580px) {
+                filter: blur(.15rem);
+            }
+
+            @include sm{
+                filter: blur(.3rem);
+
+            }
+            @include md{
+                filter: blur(.3rem);
+            }
+        }
+
+        .slider-navList{
+            position: absolute;
+            left: -2rem;
+            list-style-type: none;
+            display: flex;
+            height: 100%;
+            align-items: left;
+            justify-content: space-between;
+            flex-direction: column;
+            li{
+                font-size: 5rem;
+                font-family: var(--Heavy);
+                -webkit-text-stroke: 1px var(--MyGray);
+                color: transparent;
+                cursor: pointer;
+                transition: all .5s ease;
+
+                &:hover{
+                    color: var(--MyGray);
+                    transform: translateX(3.5rem);
+                    -webkit-text-stroke: none;
+                }
+            }
+
+            .navList-active{
+                color: var(--Licorice);
+            }
+
+            @include sm{
+                display: none;
+            }
+        }
+        
+        .slider--content{
+            display: flex;
+            position: relative;
+            height: 100%;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+
+            .slider--feature{
+                text-align: left;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+
+                .slider-logo{
+                    position: absolute;
+                    height: 3rem;
+                    top: -6rem;
+                    left: 8rem;
+                }
+
+                .slider-tech{
+                    display: flex;
+                    margin-top: 1rem;
+                    list-style-type: none;
+                    li{
+                        img{
+                            width: 2rem;
+                        }
+                        .figma{
+                            width: auto;
+                            height: 2rem;
+                        }
+                    }
+                }
+
+                h1{
+                    position: relative;
+                    top: 0;
+                    text-transform: capitalize;
+
+                    &::before{
+                        content: "Projet WEB";
+                        position: absolute;
+                        top: -5rem;
+                        font-size: 1.25rem;
+                        font-family: var(--Regular);
+                    }
+
+                    &::after{
+                        content : "";
+                        position: absolute;
+                        left: 0;
+                        top: -2rem;
+                        background-color: var(--Licorice);
+                        width: 10rem;
+                        height: 1px;
+                    }
+                }
+
+                p{
+                    position: relative;
+                    font-family: var(--Light);
+                    margin-top: 2rem;
+                    max-width: 45rem;
+                    line-height: 1.5rem;
+                }
+
+                .feature__btn{
+                    position: relative;
+                    margin-top: 2rem;
+                    width: 20rem;
+                    padding: 1rem 3rem;
+                    border: none;
+                    background: linear-gradient(45deg, var(--BlueGreen), var(--AquaMarine));
+                    background-size: 400% 400%;
+                    animation: gradient 10s ease infinite;
+                    overflow: hidden;
+                    cursor: pointer;
+
+                    span{
+                        &:first-child{
+                            visibility: hidden;
+                            position: initial;
+                        }
+                        
+                        &:last-child{
+                            position: absolute;
+                            color: var(--WhitePearl);
+                            font-size: 3rem;
+                            top: -.6rem;
+                            left: -5rem;
+                            transition: all .5s ease;
+                        }
+                    }
+
+                    &::before{
+                        z-index: 1;
+                        top: .1rem;
+                        left: .1rem;
+                        position: absolute;
+                        content: "Voir le projet";
+                        font-family: var(--Light);
+                        background-color: var(--WhitePearl);
+                        padding: .9rem 2.9rem;
+                        transition: all .5s ease;
+                        width: 19.75rem;
+                    }
+
+                    &:hover, &:focus{
+                        &::before{
+                            opacity: 0;
+                            padding: 0;
+                            top: 0;
+                            content: "";
+                        }
+
+                        span:last-child{
+                            left: 9rem;
+                        }
+                        
+                    }
+                }
+            }
+        }
+
+        .slider__btn-left, .slider__btn-right{
+            bottom: 1rem;
+            display: none;
+            position: absolute;
+            width: 5rem;
+            height: 5rem;
+            border-radius: 100rem;
+            border: 1px solid var(--WhitePearl);
+            background-color: #33999951;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all .3s ease;
+
+            @include sm{
+                display:  block;
+            }
+
+            span{
+                transform: translateY(-10px);
+                transition: all .3s ease;
+                color: var(--WhitePearl);
+            }
+
+            &:hover{
+                span{
+                    transform: translateX(-3px);
+                }
+            }
+        }
+
+        .slider__btn-left{
+            left: 0; 
+        }
+
+        .slider__btn-right{
+            right: 0;
+        }
+    }
+}
+
+//slider
+
+//pop-up gallerie
+
+.wp-popup{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    background-color: #1d050eA1;
+    z-index: 5;
+    .wp-popup-close{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    .wp-window{
+        position: relative;
+        width: 80%;
+        height: 80%;
+        background-color: var(--WhitePearl);
+        padding: 2rem;
+        overflow-y: scroll;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+
+        .wp-button-popup{
+            align-self: flex-start;
+            border: none;
+            padding: 1.5rem 3rem;
+            font-family: var(--Aileron);
+            text-transform: capitalize;
+            position: relative;
+            overflow: hidden;
+            transition: all .5s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(45deg, var(--BlueGreen), var(--AquaMarine));
+            background-size: 400% 400%;
+            animation: gradient 10s ease infinite;
+            color: var(--Licorice);
+            cursor: pointer;
+            letter-spacing: .04rem;
+
+            .wp-button-popup-close{
+                position: absolute;
+                transition: all .5s ease-in-out;
+                transform: translateY(0);
+            }
+
+            &::before{
+                box-sizing:border-box;
+                position: absolute;
+                content: 'x';
+                transform: translateY(5rem);
+                transition: all .5s ease-in-out;
+                color: var(--WhitePearl);
+                font-size: 1.02rem;
+            }
+
+            &:hover{
+                .wp-button-popup-close{
+                    transform: translateY(-5rem);
+                }
+                &::before{
+                    transform: translateY(0);
+                }
+            }
+        }
+
+        .wp-popup-title{
+            text-transform: capitalize;
+        }
+
+        .pop-up-links{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .popup-card-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10vmin;
+            
+            .popup-card{
+                flex: 1;
+                overflow: hidden;
+                transition: .5s;
+                box-shadow: 0 20px 30px rgba(0,0,0,.1);
+                line-height: 0;
+               
+                img {
+                    width: 200%;
+                    height: calc(100% - 10vh);
+                    object-fit: cover; 
+                    transition: .5s;
+                }
+
+                &:hover {
+                    flex: 1 1 50%; 
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }    
+            }
+        }
+    }
+}
+
