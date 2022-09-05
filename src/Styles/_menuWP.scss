@@ -20,6 +20,16 @@
         width: 100%;
         height: 100vh;
 
+        .aud-spline{
+            position: absolute;
+            top :0;
+            right: 0;
+            transform: translate(25rem);
+            @include sm{
+                display: none !important;
+            }
+        }
+
 
         .slider-bg{
             width: 100%;
@@ -85,6 +95,7 @@
                 position: relative;
                 display: flex;
                 flex-direction: column;
+                z-index: 1;
 
                 .slider-logo{
                     position: absolute;
@@ -97,13 +108,20 @@
                     display: flex;
                     margin-top: 1rem;
                     list-style-type: none;
+                    gap: 2rem;
                     li{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
                         img{
                             width: 2rem;
                         }
                         .figma{
                             width: auto;
                             height: 2rem;
+                        }
+                        span{
+                            font-family: var(--Regular);
                         }
                     }
                 }
@@ -157,7 +175,7 @@
                             visibility: hidden;
                             position: initial;
                         }
-                        
+
                         &:last-child{
                             position: absolute;
                             color: var(--WhitePearl);
@@ -355,4 +373,6 @@
         }
     }
 }
+
+
 

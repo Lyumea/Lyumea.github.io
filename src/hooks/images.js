@@ -6,11 +6,12 @@ const images = [
         text : "Adopte un déchet",
         desc : "Cupcake ipsum dolor. Sit amet marshmallow topping cheesecake muffin. Halvah croissant candy canes bonbon candy. Apple pie jelly beans topping carrot cake danish tart cake cheesecake. Muffin danish chocolate soufflé pastry icing bonbon oat cake. Powder cake jujubes oat cake. Lemon drops tootsie roll marshmallow halvah carrot cake.",
         tech : [
-            '<li> <img src="assets/svg/icons/vuejs.svg" /> </li>',
-            '<li> <img src="assets/svg/icons/sass.svg" /> </li>',
-            '<li> <img src="assets/svg/icons/adobe-illustrator.svg" /> </li>',
-            '<li> <img src="assets/svg/icons/adobe-xd.svg" /> </li>'
-        ]
+            '<li> <img src="assets/svg/icons/vuejs.svg" alt="Icône VueJS" />  </li>',
+            '<li> <img src="assets/svg/icons/sass.svg" alt="Icône Sass/Scss" />  </li>',
+            '<li> <img src="assets/svg/icons/adobe-illustrator.svg" alt="Icône Adobe Illustrator" /> </li>',
+            '<li> <img src="assets/svg/icons/adobe-xd.svg" alt="Icône Adobe XD" /> </li>'
+        ],
+        scene : "https://prod.spline.design/DQ3IVktoR7mC0Djn/scene.splinecode"
     },
 
     {   
@@ -20,13 +21,14 @@ const images = [
         text : "symfony online",
         desc : "Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before. Many say exploration is part of our destiny, but it’s actually our duty to future generations and their quest to ensure the survival of the human species.",
         tech : [
-            '<li> <img src="assets/svg/icons/symfony.svg" /> </li>',
-            '<li> <img src="assets/svg/icons/sass.svg" /> </li>',
-            '<li> <img src="assets/svg/icons/adobe-illustrator.svg" /> </li>',
-            '<li> <img src="assets/svg/icons/adobe-xd.svg" /> </li>',
-            '<li> <img src="assets/svg/icons/adobe-premiere-pro.svg" /> </li>',
-            '<li> <img src="assets/svg/icons/adobe-after-effects.svg" /> </li>'
-        ]
+            '<li> <img src="assets/svg/icons/symfony.svg" alt="Icône symfony" /> </li>',
+            '<li> <img src="assets/svg/icons/sass.svg" alt="Icône Sass" />  </li>',
+            '<li> <img src="assets/svg/icons/adobe-illustrator.svg" alt="Icône Adobe Illustrator" />  </li>',
+            '<li> <img src="assets/svg/icons/adobe-xd.svg" alt="Icône Adobe XD" /> </li>',
+            '<li> <img src="assets/svg/icons/adobe-premiere-pro.svg" alt="Icône Adobe Premiere Pro" /> </li>',
+            '<li> <img src="assets/svg/icons/adobe-after-effects.svg" alt="Icône Adobe After Effects" /> </li>'
+        ],
+        scene : "https://prod.spline.design/dTCTxZHRDPEzBuqh/scene.splinecode"
     },
 
     {   
@@ -40,7 +42,8 @@ const images = [
             '<li> <img src="assets/svg/icons/sass.svg" /> </li>',
             '<li> <img src="assets/svg/icons/adobe-illustrator.svg" /> </li>',
             '<li> <img class="figma" src="assets/svg/icons/figma.svg" /> </li>'
-        ]
+        ],
+        scene : "https://prod.spline.design/GZ10VIFrsMS3rCJH/scene.splinecode"
     },
 
     {   
@@ -54,7 +57,8 @@ const images = [
             '<li> <img src="assets/svg/icons/adobe-illustrator.svg" /> </li>',
             '<li> <img src="assets/svg/icons/adobe-xd.svg" /> </li>',
             '<li> <img src="assets/svg/icons/wordpress-simple.svg" /> </li>'
-        ]
+        ],
+        scene : "https://prod.spline.design/DQ3IVktoR7mC0Djn/scene.splinecode"
     }
 ]
 

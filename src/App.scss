@@ -1,5 +1,5 @@
 // Fichiers css
-@use 'styles/_colors';
+@use 'styles/colors';
 @use 'styles/mixins';
 @use 'styles/mainMenu';
 @use 'styles/animations';
@@ -8,6 +8,8 @@
 @use 'styles/contact';
 @use 'styles/menuWP';
 @use 'styles/menuPortfolio';
+@use 'styles/carousel';
+@use 'styles/dsection';
 
 @import "styles/mixins";
 
@@ -46,8 +48,9 @@ h1{
   }
 }
 
-h2{
+h1,h2{
   color: var(--Licorice);
+  text-transform: capitalize;
 }
 
 .loading-container{

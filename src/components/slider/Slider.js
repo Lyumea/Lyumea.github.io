@@ -1,5 +1,7 @@
 import React, {useRef, useState} from "react";
 import useSlider from "../../hooks/useSlider";
+// import AudUI from "../3d/interface/aud/AudUI";
+import DefaultUI from "../3d/interface/DefautUI";
 import WpPopup from "../pop-up/WpPopup";
 
 const Slider = ({images}) => {
@@ -9,7 +11,7 @@ const Slider = ({images}) => {
     const slideTech = useRef(null);
     const slideNav = useRef(null);
     const slideLogo = useRef(null);
-    const {useNav, goToPreviousSlide, goToNextSlide} = useSlider(
+    const {useNav, goToPreviousSlide, goToNextSlide, wSlideCounter} = useSlider(
         slideImage,
         slideText,
         slideDesc,
@@ -20,8 +22,6 @@ const Slider = ({images}) => {
     );
 
   const [popUp, setPopUp] = useState(false);
-  let iPopUp = 0;
-  const [iwp, setIwp] = useState(0);
 
   //active la modale
   const setPopUpTrue = () => {
@@ -31,37 +31,15 @@ const Slider = ({images}) => {
   const setPopUpFalse = () => {
     setPopUp(false);
   }
-  //gestion de la variable dans le menu
-  const HandleNav = (event) => {
-    useNav(event);
-    iPopUp = event.target.textContent - 1;
-    setIwp(iPopUp);
-  }
-  //slide pour le format mobile
-  const HandleNextSlide = () => {
-    goToNextSlide();
-    (iPopUp === images.length -1) ? iPopUp = 0 : iPopUp ++;
-    // setIwp(iPopUp);
-    console.log(iPopUp);
-  }
-  //slide pour le format mobile
-  const HandlePreviousSlide = () => {
-    goToPreviousSlide();
-    (iPopUp === 0) ? iPopUp = images.length - 1 : iPopUp --;
-    // setIwp(iPopUp);
-    console.log(iPopUp);
-  }
 
     return (
         <div className="slider" >
-          {
-            (popUp) ? <WpPopup slideCounter={iwp} close={setPopUpFalse} /> : null
-          }
+          {(popUp) ? <WpPopup slideCounter={wSlideCounter} close={setPopUpFalse} /> : null}
           <div ref={slideImage} className="slider-bg"></div>
           <ul ref={slideNav} className="slider-navList">
                   {images.map((image) => (
-                    <li key={image.id -1} onClick={HandleNav} > 
-                    <span >{image.id}</span>
+                    <li key={image.id -1} onClick={useNav} > 
+                      <span >{image.id}</span>
                     </li>
                   ))}
           </ul>
@@ -70,19 +48,18 @@ const Slider = ({images}) => {
               <h1 ref={slideText} className="feature--title"> </h1>
              <img className="slider-logo" alt="" ref={slideLogo} />
               <p ref={slideDesc} className="feature--text"> </p>
-             <ul className="slider-tech" ref={slideTech}>
-                    
-              </ul>
+             <ul className="slider-tech" ref={slideTech}></ul>
               <button className="feature__btn" onClick={setPopUpTrue}> <span>Voir le Projet</span> <span >&#8594; </span> </button>
             </div>
           </div>
 
-          <button onClick={HandlePreviousSlide} className="slider__btn-left">
-                <span> &#8592; </span>
-            </button>
-          <button onClick={HandleNextSlide} className="slider__btn-right">
-                <span> &#8594; </span>
+          <button onClick={goToPreviousSlide} className="slider__btn-left">
+            <span> &#8592; </span>
           </button>
+          <button onClick={goToNextSlide} className="slider__btn-right">
+            <span> &#8594; </span>
+          </button>
+          <DefaultUI scene={images[wSlideCounter].scene} />
         </div>
       )
 }

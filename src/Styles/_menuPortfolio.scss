@@ -68,7 +68,7 @@
 
     .slider{
       height: 100%;
-      width: 100%;
+      width: 100%;  
 
       .slider-bg{
         width: 100%;
@@ -81,7 +81,6 @@
 
         @include sm{
             filter: blur(.3rem);
-
         }
         @include md{
             filter: blur(.3rem);
