@@ -108,6 +108,7 @@
                     display: flex;
                     margin-top: 1rem;
                     list-style-type: none;
+                    flex-wrap: wrap;
                     gap: 2rem;
                     li{
                         display: flex;
@@ -170,6 +171,11 @@
                     overflow: hidden;
                     cursor: pointer;
 
+                    @include xs{
+                        padding: 1rem 0;
+                        width: 100%;
+                    }
+
                     span{
                         &:first-child{
                             visibility: hidden;
@@ -197,6 +203,10 @@
                         padding: .9rem 2.9rem;
                         transition: all .5s ease;
                         width: 19.75rem;
+                        @include xs{
+                            padding: .9rem 0;
+                            width: 99%;
+                        }
                     }
 
                     &:hover, &:focus{

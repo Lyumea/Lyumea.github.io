@@ -15,6 +15,7 @@
       height: 100%;
       justify-content: space-around;
       left: -2rem;
+     
 
       @include sm{
         display: none;
@@ -46,24 +47,45 @@
       font-size: 5rem;
       background: none;
       border: none;
-      top: 45vh;
       display: none;
       &:last-child{
+        top: 45vh;
         display: block;
         font-size: 2rem;
         animation: float 3s ease-in-out infinite;
       }
       @include sm {
         display: block;
+        font-size: 3.5rem;
       }
+    }
+
+    .slider__btn-left, .slider__btn-right{
+      // border: solid 1px var(--Licorice);
+      bottom: 2rem;
+      cursor: pointer;
+      padding: .5rem;
+      transition: all .3s ease;
     }
 
     .slider__btn-left{
       left: 5rem;
+      &:hover{
+        transform: translateX(-5px);
+      }
+      @include xs{
+        left: 2rem;
+      }
     }
 
     .slider__btn-right{
       right: 5rem;
+      &:hover{
+        transform: translateX(5px);
+      }
+      @include xs{
+        right: 2rem;
+      }
     }
 
     .slider{
@@ -103,6 +125,17 @@
               h1{
                 border: 1px solid var(--Licorice);
                 padding: 2rem 20rem;
+                @include md{
+                  padding: 2rem 15rem;
+                }
+
+                @include sm{
+                  padding: 2rem 10rem ;
+                }
+
+                @include xs {
+                  padding: 2rem 5rem;
+                }
               }
 
               p{
@@ -111,6 +144,12 @@
                 text-align: center;
                 width: 100%;
                 top: 22vh;
+                @include sm {
+                  top: 18vh;
+                }
+                @include xs {
+                  top: 15vh;
+                }
               }
 
               ul{

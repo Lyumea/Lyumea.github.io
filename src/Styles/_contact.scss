@@ -40,6 +40,10 @@
                     height: 2px;
                     background-color: var(--Zomp);
                 }
+
+                @include xs{
+                    margin-top: 5rem;
+                }
             }
     
             p{
@@ -59,12 +63,16 @@
         
         @include md{
             margin-top: 2.5rem;
-            width: 40%;
+            width: 60%;
         }
 
         @include sm{
             margin-top: 6rem;
             width: 100%;
+        }
+
+        @include xs{
+            margin-top: 2rem;
         }
     }
 

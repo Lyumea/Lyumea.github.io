@@ -7,6 +7,9 @@ import MenuWebProject from './Pages/Menus/MenuWebProject';
 import MenuPortfolio from './Pages/Menus/MenuPortfolio';
 import Contact from './Pages/Contact';
 import Section2D from './Pages/Portfolio/Section2D';
+import Section3D from './Pages/Portfolio/Section3D';
+import SectionPrint from './Pages/Portfolio/SectionPrint';
+import SectionVideo from './Pages/Portfolio/SectionVideo';
 
 
 
@@ -21,7 +24,10 @@ function App() {
         <Route path="/" element={ <Home /> } />
         <Route path="/web-projects" element={ <MenuWebProject /> } />
         <Route path="/portfolio" element={ <MenuPortfolio /> } />
-        <Route path="/portfolio/2d" element={ <Section2D /> } /> 
+        <Route path="/portfolio/2d" element={ <Section2D /> } />
+        <Route path="/portfolio/3d" element={ <Section3D /> } />
+        <Route path="/portfolio/print" element={ <SectionPrint /> } />
+        <Route path="/portfolio/video" element={ <SectionVideo /> } />
         <Route path="/contact" element={ <Contact /> } />
       </Routes>
 
