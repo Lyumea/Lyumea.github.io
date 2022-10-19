@@ -49,16 +49,16 @@ const images = [
     {   
         id: "04",
         src : "https://cdn.discordapp.com/attachments/966254135601160212/970683257920303144/svp-bg-3.png",
-        logo : "https://cdn.discordapp.com/attachments/798552250096156743/970690080106774568/logo-svp-visio-magenta.png",
-        text : "svp visio",
-        desc : "Le projet svp-visio.com est un site de gestion de formation via un agenda pour les entreprises voulant se former sur plusieurs plateformes de visioconférence. Ce site WEB a été mis en place grâce au CMS Wordpress.",
+        logo : "assets/svg/logo/apsem/apsem-logo.svg",
+        text : "APSEM",
+        desc : "L’APSEM (Association Socio-Educ Migrant) est une association formant vers un métier les personnes en difficultés. L’objectif de cette association est d’aider les personnes en difficulté à trouver un emploi qui leur correspond grâce à de diverses formations et d’activités principalement en occitanie. L’APSEM possède de nombreux partenaires tels que la région occitanie, le conseil départemental, la mairie de Toulouse jusqu’à l’assemblée nationale et la caisse d’Epargne.",
         tech : [
             '<li> <img src="assets/svg/icons/adobe-photoshop.svg" /> </li>',
             '<li> <img src="assets/svg/icons/adobe-illustrator.svg" /> </li>',
-            '<li> <img src="assets/svg/icons/adobe-xd.svg" /> </li>',
+            '<li> <img class="figma" src="assets/svg/icons/figma.svg" /> </li>',
             '<li> <img src="assets/svg/icons/wordpress-simple.svg" /> </li>'
         ],
-        scene : "https://prod.spline.design/DQ3IVktoR7mC0Djn/scene.splinecode"
+        scene : "https://prod.spline.design/ZuNxFmesenXWeszQ/scene.splinecode"
     }
 ]
 
