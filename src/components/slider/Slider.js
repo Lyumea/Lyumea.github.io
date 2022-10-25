@@ -1,8 +1,22 @@
 import React, {useRef, useState} from "react";
 import useSlider from "../../hooks/useSlider";
-// import AudUI from "../3d/interface/aud/AudUI";
-import DefaultUI from "../3d/interface/DefautUI";
+import AudUI from "../3d/interface/aud/AudUI";
+import ApsemUI from "../3d/interface/apsem/ApsemUI";
+import SoUI from "../3d/interface/so/SoUI";
+import EraUI from "../3d/interface/era/EraUI";
+import Spline from '@splinetool/react-spline';
+// import DefaultUI from "../3d/interface/DefautUI";
 import WpPopup from "../pop-up/WpPopup";
+
+const ChooseSpline = ({counter}) => {
+  switch(counter){
+    case 0: return <AudUI />;
+    case 1 : return <SoUI />;
+    case 2 : return <EraUI />;
+    case 3 : return <ApsemUI />;
+    default : return <Spline scene="https://prod.spline.design/RstQ9TTxWzKz3C9t/scene.splinecode" /> ;
+  }
+}
 
 const Slider = ({images}) => {
     const slideImage = useRef(null);
@@ -45,6 +59,7 @@ const Slider = ({images}) => {
           </ul>
           <div className="slider--content container">
             <div className="slider--feature">
+              <p className="date-wp">{images[wSlideCounter].date}</p>
               <h1 ref={slideText} className="feature--title"> </h1>
              <img className="slider-logo" alt="" ref={slideLogo} />
               <p ref={slideDesc} className="feature--text"> </p>
@@ -59,7 +74,9 @@ const Slider = ({images}) => {
           <button onClick={goToNextSlide} className="slider__btn-right">
             <span> &#8594; </span>
           </button>
-          <DefaultUI scene={images[wSlideCounter].scene} />
+          {/* <DefaultUI scene={images[wSlideCounter].scene} /> */}
+          
+          <ChooseSpline counter={wSlideCounter} />
         </div>
       )
 }

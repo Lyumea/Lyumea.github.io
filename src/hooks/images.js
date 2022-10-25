@@ -11,6 +11,7 @@ const images = [
             '<li> <img src="assets/svg/icons/adobe-illustrator.svg" alt="Icône Adobe Illustrator" /> </li>',
             '<li> <img src="assets/svg/icons/adobe-xd.svg" alt="Icône Adobe XD" /> </li>'
         ],
+        date : 2021,
         scene : "https://prod.spline.design/DQ3IVktoR7mC0Djn/scene.splinecode"
     },
 
@@ -28,6 +29,7 @@ const images = [
             '<li> <img src="assets/svg/icons/adobe-premiere-pro.svg" alt="Icône Adobe Premiere Pro" /> </li>',
             '<li> <img src="assets/svg/icons/adobe-after-effects.svg" alt="Icône Adobe After Effects" /> </li>'
         ],
+        date : 2021,
         scene : "https://prod.spline.design/dTCTxZHRDPEzBuqh/scene.splinecode"
     },
 
@@ -43,6 +45,7 @@ const images = [
             '<li> <img src="assets/svg/icons/adobe-illustrator.svg" /> </li>',
             '<li> <img class="figma" src="assets/svg/icons/figma.svg" /> </li>'
         ],
+        date : 2022,
         scene : "https://prod.spline.design/GZ10VIFrsMS3rCJH/scene.splinecode"
     },
 
@@ -51,13 +54,14 @@ const images = [
         src : "https://cdn.discordapp.com/attachments/966254135601160212/970683257920303144/svp-bg-3.png",
         logo : "assets/svg/logo/apsem/apsem-logo.svg",
         text : "APSEM",
-        desc : "L’APSEM (Association Socio-Educ Migrant) est une association formant vers un métier les personnes en difficultés. L’objectif de cette association est d’aider les personnes en difficulté à trouver un emploi qui leur correspond grâce à de diverses formations et d’activités principalement en occitanie. L’APSEM possède de nombreux partenaires tels que la région occitanie, le conseil départemental, la mairie de Toulouse jusqu’à l’assemblée nationale et la caisse d’Epargne.",
+        desc : "L’APSEM (Association Socio-Educ Migrant) est une association formant vers un métier les personnes en difficultés. Le projet a pour but de mettre à jour la communication visuelle afin d’améliorer la visibilité de l’APSEM à en Occitanie. En effet, une modification de la charte graphique, un nouveau site internet, une représentation audiovisuelle ainsi qu’une campagne sur au moins un réseau social sont prioritaire.",
         tech : [
             '<li> <img src="assets/svg/icons/adobe-photoshop.svg" /> </li>',
             '<li> <img src="assets/svg/icons/adobe-illustrator.svg" /> </li>',
             '<li> <img class="figma" src="assets/svg/icons/figma.svg" /> </li>',
             '<li> <img src="assets/svg/icons/wordpress-simple.svg" /> </li>'
         ],
+        date : 2022,
         scene : "https://prod.spline.design/ZuNxFmesenXWeszQ/scene.splinecode"
     }
 ]
