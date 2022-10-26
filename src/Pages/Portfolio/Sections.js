@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper";
+import { Keyboard,Mousewheel,Pagination } from "swiper";
 
 // Import Swiper styles
 import "swiper/css";
@@ -12,7 +12,7 @@ const Sections = ({images, h1}) => {
             <Swiper
                 direction={"vertical"}
                 pagination={{clickable: true,}}
-                modules={[Pagination]}
+                modules={[Pagination, Mousewheel, Keyboard]}
                 className="mySwiper"
                 mousewheel
                 keyboard

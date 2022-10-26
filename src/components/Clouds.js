@@ -22,10 +22,10 @@ const boxShadows = (max) => {
 }
 
 
-const Clouds = ({cloudClassName}) => {
+const Clouds = ({cloudClassName, boxShadow}) => {
     return (
         <div className="absolute">
-            <div className={cloudClassName} style={{boxShadow : boxShadows(3)}} > </div>
+            <div className={cloudClassName} style={{boxShadow : boxShadows(boxShadow)}} > </div>
 
             <svg xmlns="http://www.w3.org/2000/svg" width="0" >
                 <filter id="filter">

@@ -15,6 +15,7 @@
         position: absolute;
         width: 100%;
         font-size: 10rem;
+        transform: translateY(100%);
         text-shadow: 
         -0.0075em 0.0075em .5rem mix(#f8f6f0, #339999, 94%),
         0.005em 0.005em .5rem mix(#f8f6f0, #339999, 60%),
@@ -40,5 +41,74 @@
         position: absolute;
         bottom: -10rem;
     }
+
+    .home-cloud1{
+        position: absolute;
+        bottom: 0;
+    }
+
+    .swiper{
+        top: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+
+        .cloud1{
+            position: absolute;
+            bottom: 0;
+        }
+
+        .cloud2{
+            position: absolute;
+            right: 0;
+            top: 0;
+            transform: rotate(-90deg) translateY(60%);
+            z-index: 1;
+        }
+
+        .swiper-button-next{
+            position: absolute;
+        }
+
+        .container{
+            height: 100%;
+            position: relative;
+        }
+
+        .apropos{
+            width: 100%;
+            height: 100%;
+
+            .apropos-text, .apropos-img{
+                width: 50%;
+            }
+
+            .apropos-text{
+                text-align: left;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                h2{
+                    font-size: 4rem;
+                    letter-spacing: .5rem;
+                    
+                }
+                p{
+                    font-family: var(--Light);
+                }
+            }
+
+            .apropos-img{
+                
+                img{
+                    position: absolute;
+                    right: -5rem;
+                    bottom: 0;
+                    width: 30rem;
+                }
+            }
+        }
+    }
+
 
 }
