@@ -1,23 +1,38 @@
+import React from "react";
 import LogoNai from "../components/3d/logo/LogoNai";
 import Clouds from "./../components/Clouds";
 import "../Styles/_mixins.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
+import SwiperCore, { Navigation, Parallax, Mousewheel } from "swiper";
 import Apropos from "../components/Apropos";
 // Import Swiper styles
 import "swiper/css";
 import 'swiper/css/navigation';
 
+SwiperCore.use([Navigation]);
 
-export default function Home(){
+
+const Home = () => {
+    const navigationPrevRef = React.useRef(null)
+    const navigationNextRef = React.useRef(null)
 
         return(
             <header className="home-header">
                 <div className="img-clouds cloud2"></div>
                 <Swiper 
                     direction={"horizontal"}
-                    modules={[Navigation]}
-                    navigation
+                    modules={[Navigation, Parallax, Mousewheel]}
+                    navigation={{
+                        prevEl: navigationPrevRef.current,
+                        nextEl: navigationNextRef.current,
+                      }}
+                    onBeforeInit={(swiper) => {
+                        swiper.params.navigation.prevEl = navigationPrevRef.current;
+                        swiper.params.navigation.nextEl = navigationNextRef.current;
+                   }}
+
+                    parallax
+                    mousewheel
                 >
                     <SwiperSlide className="home-swiper">
                         <h1 className="home-main-title"> NAI • Creative</h1>
@@ -30,8 +45,12 @@ export default function Home(){
                         <div className="img-clouds cloud2"></div>
                         <div className="img-clouds cloud1"></div>
                     </SwiperSlide>
+                    <div className="swiper-prev" ref={navigationPrevRef} />
+                    <div className="swiper-next" ref={navigationNextRef} />
                     <Clouds boxShadow={3} cloudClassName="cloud home-cloud" />
                 </Swiper>
             </header>
         )
 }
+
+export default Home;

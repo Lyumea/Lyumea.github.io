@@ -5,7 +5,6 @@ import ApsemUI from "../3d/interface/apsem/ApsemUI";
 import SoUI from "../3d/interface/so/SoUI";
 import EraUI from "../3d/interface/era/EraUI";
 import Spline from '@splinetool/react-spline';
-// import DefaultUI from "../3d/interface/DefautUI";
 import WpPopup from "../pop-up/WpPopup";
 
 const ChooseSpline = ({counter}) => {
@@ -37,6 +36,7 @@ const Slider = ({images}) => {
 
   const [popUp, setPopUp] = useState(false);
 
+
   //active la modale
   const setPopUpTrue = () => {
     setPopUp(true);
@@ -47,7 +47,7 @@ const Slider = ({images}) => {
   }
 
     return (
-        <div className="slider" >
+        <div className="slider">
           {(popUp) ? <WpPopup slideCounter={wSlideCounter} close={setPopUpFalse} /> : null}
           <div ref={slideImage} className="slider-bg"></div>
           <ul ref={slideNav} className="slider-navList">

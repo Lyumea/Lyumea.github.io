@@ -1,13 +1,16 @@
 import {useEffect, useState} from 'react';
 
-//utilisation des slides
+//utilisation des slides avec comme paramètres les éléments utilisés
 const useSlider = (slideImage, slideText, slideDesc, slideTech, slideNav, slideLogo, images ) => {
     let [wSlideCounter, setWSlideCounter] = useState(0);
-    const max = images.length -1;
 
-    useEffect( () => {
+    //définition du nombre max de slides
+    const max = images.length -1;
+    
+    //Commencement du slide
+    useEffect (() =>{
         handleSlide(wSlideCounter);
-    });
+    })
 
     //gestion de la navigation
     const useNav = event => {
@@ -78,7 +81,8 @@ const useSlider = (slideImage, slideText, slideDesc, slideTech, slideNav, slideL
         setWSlideCounter((prevState) => (prevState === max) ? 0 : prevState + 1);
     }
 
-    //valeurs/fonctions à retourner si besoin
+
+    //valeurs et fonctions à retourner si besoin
     return { goToPreviousSlide, goToNextSlide, useNav, wSlideCounter}
 }
 export default useSlider

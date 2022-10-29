@@ -1,5 +1,7 @@
 import React, {useRef} from "react";
 import useSliderPortfolio from "../../hooks/useSliderPortfolio";
+import { NavLink } from 'react-router-dom';
+
 
 const SliderPortfolio = ({categories}) =>{
     const slideImage = useRef(null);
@@ -9,7 +11,7 @@ const SliderPortfolio = ({categories}) =>{
     const slideNav = useRef(null);
     const slideLogo = useRef(null);
 
-    const {useNav, goToPreviousSlide, goToNextSlide} = useSliderPortfolio(
+    const {useNav, goToPreviousSlide, goToNextSlide, pSlideCounter} = useSliderPortfolio(
         slideImage,
         slideText,
         slideDesc,
@@ -46,7 +48,9 @@ const SliderPortfolio = ({categories}) =>{
               <h1 ref={slideText} className="feature--title"> </h1>
              <img className="slider-logo" ref={slideLogo} alt="" />
               <p ref={slideDesc} className="feature--text"> </p>
-              <button> &#8595; </button>
+              {/* <button> &#8595; </button> */}
+              <NavLink className="voir-button" to={categories[pSlideCounter].path}> Voir </NavLink>
+              
             </div>
           </div>
 

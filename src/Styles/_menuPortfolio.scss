@@ -60,6 +60,51 @@
       }
     }
 
+    .voir-button{
+      text-decoration: none;
+      position: relative;
+      font-size: 1.5rem;
+      background: none;
+      top: 5rem;
+      border: 1px solid var(--Licorice);
+      color: var(--Licorice);
+      padding: .5rem 3rem;
+      font-family: var(--Regular);
+      overflow: hidden;
+      z-index: 1;
+      transition: all .5s ease-in-out;
+
+      &::before{
+        content: '\2191';
+        font-size: 1rem;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        background: linear-gradient(45deg, var(--Licorice), var(--MyGray));
+        background-size: 400% 400%;
+        animation: gradient 10s ease infinite;
+        transition: all .5s ease-in-out;
+        color: var(--Mint);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &:hover{
+        color: var(--WhitePearl);
+
+        &::before{
+          top: 0;
+          font-size: 2.5rem;
+        }
+      }
+
+
+    }
+
     .slider__btn-left, .slider__btn-right{
       // border: solid 1px var(--Licorice);
       bottom: 2rem;

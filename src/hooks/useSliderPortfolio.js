@@ -4,11 +4,15 @@ import {useEffect, useState} from 'react';
 const useSliderPortfolio = (slideImage, slideText, slideDesc, slideTech, slideNav, slideLogo, images) => {
     //initiation du state à reprendre si besoin
     let [pSlideCounter, setPSlideCounter] = useState(0);
+
+    //définition du nombre max de slide en fonction du tableau
     const max = images.length -1;
+
     //utilisation direct de handleSlide
     useEffect( () => {
         handleSlide(pSlideCounter);
     });
+
     //gestion de la navigation
     const useNav = event => {
         setPSlideCounter(event.target.textContent - 1);
@@ -63,14 +67,17 @@ const useSliderPortfolio = (slideImage, slideText, slideDesc, slideTech, slideNa
         },2000 )
     }
 
+    //Slide suivante
     const goToPreviousSlide = () => {
         setPSlideCounter((prevState) => (prevState === 0) ? max : prevState -1);
     }
 
+    //Slide précédante
     const goToNextSlide = () => {
         setPSlideCounter((prevState) => (prevState === max) ? 0 : prevState + 1);
     }
 
-    return { goToPreviousSlide, goToNextSlide, useNav}
+    //éléments à retoutner si besoin
+    return { goToPreviousSlide, goToNextSlide, useNav, pSlideCounter}
 }
 export default useSliderPortfolio

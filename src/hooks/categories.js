@@ -9,6 +9,7 @@
             '<li> <img src="assets/svg/icons/adobe-illustrator.svg" alt="Icone du logiciel Adobe : Illustrator" /> </li>',
             '<li> <img src="assets/svg/icons/adobe-photoshop.svg" alt="Icone du logiciel Adobe : Photoshop" /> </li>'
         ],
+        path: "/portfolio/2d"
     },
 
     {
@@ -17,7 +18,8 @@
         desc : "illustrations 3D",
         src : "",
         logo : "",
-        tech : ["Blender, Spline"]
+        tech : ["Blender, Spline"],
+        path: "/portfolio/3d"
     },
 
     {
@@ -26,7 +28,8 @@
         desc : "Mon portfolio print, affiches et flyers",
         src : require("../assets/img/bg/book/nai-portfolio.jpg"),
         logo : "",
-        tech : ["Indesign"]
+        tech : ["Indesign, Illustrator"],
+        path: "/portfolio/print"
     },
 
     {
@@ -38,7 +41,8 @@
         tech: [
             '<li> <img src="assets/svg/icons/adobe-premiere-pro.svg" alt="Icone du logiciel Adobe : Premiere Pro" /> </li>',
             '<li> <img src="assets/svg/icons/adobe-after-effects.svg" alt="Icone du logiciel Adobe : After Effecs" /> </li>'
-        ]
+        ],
+        path: "/portfolio/video"
     }
 ]
 
