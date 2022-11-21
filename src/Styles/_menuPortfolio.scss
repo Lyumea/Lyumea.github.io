@@ -66,13 +66,13 @@
       font-size: 1.5rem;
       background: none;
       top: 5rem;
-      border: 1px solid var(--Licorice);
+      border: .5px solid var(--Licorice);
       color: var(--Licorice);
       padding: .5rem 3rem;
       font-family: var(--Regular);
       overflow: hidden;
       z-index: 1;
-      transition: all .5s ease-in-out;
+      transition: all .3s ease-in-out;
 
       &::before{
         content: '\2191';
@@ -86,7 +86,7 @@
         background: linear-gradient(45deg, var(--Licorice), var(--MyGray));
         background-size: 400% 400%;
         animation: gradient 10s ease infinite;
-        transition: all .5s ease-in-out;
+        transition: all .3s ease-in-out;
         color: var(--Mint);
         display: flex;
         align-items: center;
@@ -168,7 +168,7 @@
               align-items: center;
               flex-direction: column;
               h1{
-                border: 1px solid var(--Licorice);
+                border: .5px solid var(--Licorice);
                 padding: 2rem 20rem;
                 @include md{
                   padding: 2rem 15rem;

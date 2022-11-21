@@ -4,7 +4,7 @@ const portfolio3d = [
         nom : "Logo 3D",
         class : "p-logo3d",
         src : "",
-        desc : ""
+        desc : "LogoNai en 3D"
     },
 
     {
