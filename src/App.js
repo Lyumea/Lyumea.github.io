@@ -24,13 +24,12 @@ function App() {
         <Route path="/" element={ <Home /> } />
         <Route path="/web-projects" element={ <MenuWebProject /> } />
         <Route path="/portfolio" element={ <MenuPortfolio /> } />
-        <Route path="/portfolio/2d" element={ <Section2D /> } />
-        <Route path="/portfolio/3d" element={ <Section3D /> } />
+        <Route path="/portfolio/graphisme" element={ <Section2D /> } />
+        <Route path="/portfolio/ui" element={ <Section3D /> } />
         <Route path="/portfolio/print" element={ <SectionPrint /> } />
         <Route path="/portfolio/video" element={ <SectionVideo /> } />
         <Route path="/contact" element={ <Contact /> } />
       </Routes>
-
 
     </div>
   );

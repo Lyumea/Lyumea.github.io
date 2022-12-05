@@ -1,6 +1,8 @@
 const portfolio2d = [
-    
-    {
+    {   
+        id : 1,
+        nom : "Logos",
+        class : "p-logo",
         logos : [    
         {
             id : 1,
@@ -44,8 +46,12 @@ const portfolio2d = [
             title: "Adopte Un déchet",
             description : "Logo du projet Adopte un déchet"
         }
-    ],
+    ]},
 
+    {   
+        id : 2,
+        nom : "Illustrations",
+        class : "p-illu",
         illustrations : [
         {
             id : 1,
@@ -75,37 +81,6 @@ const portfolio2d = [
             title: "PixelArt 1",
             description : "Plusieurs concepts en pixelArt"
         }
-    ],
-
-        UIs : [
-        {
-            id : 1,
-            miniature : `UI 1`,
-            src : "",
-            title: "My Little Litterature",
-            description : "Apperçu d'une application de librairie fictive : MyLittleLitterature"
-        },
-        {
-            id : 2,
-            miniature : `UI 2`,
-            src : "",
-            title: "ETU'",
-            description : "Apperçu d'une application étudiante fictive : ETU'"
-        },
-        {
-            id : 3,
-            miniature : `UI 3`,
-            src: "",
-            title: "Veezio",
-            description : "Apperçu d'une application de visioconférence fictive : Veezio"
-        },
-        {
-            id : 4,
-            miniature : `UI 4`,
-            src : "",
-            title: "En Recherche Active",
-            description : "Application d'une CVthèque en cours de développement : En Recherche Active"
-        },
     ]}
 ];
 

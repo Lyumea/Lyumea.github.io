@@ -1,8 +1,10 @@
 import portfolio3d from "../../hooks/portfolio3d";
 import Sections from "./Sections";
+import UI from "../../components/portfolio/UI";
+
 const Section3D = () => {
     return(
-        <Sections images={portfolio3d} h1={"3D"} />
+        <Sections content={<UI />} images={portfolio3d} h1={"UI"} />
     )
 }
 

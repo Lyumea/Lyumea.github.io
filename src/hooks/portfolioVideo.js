@@ -2,10 +2,10 @@ const portfolioVideo = [
     
     {
         id : 1,
-        nom : "Symfony-Online",
+        nom : "Motion Design",
         class : "p-so",
-        src : "assets/video/so/symfony-online-teaser.mp4",
-        gif : "assets/video/so/symfony-online-apercu.gif",
+        src : require("../assets/portfolio/video/so/symfony-online-teaser.mp4"),
+        gif : require("../assets/portfolio/video/so/symfony-online-apercu.gif"),
         desc : "Vidéo promotionnelle du projet Symfony-Online"
     },
 
@@ -13,17 +13,17 @@ const portfolioVideo = [
         id : 2,
         nom : "Tutoriel Screencast",
         class : "p-screencast",
-        src : "asstes/video/screencast/formation_screencast_bodymovin.mp4",
-        gif :"asstes/video/screencast/nai-screencast-after-vers-web.gif",
+        src : require("../assets/portfolio/video/screencast/formation_screencast_bodymovin.mp4"),
+        gif : require("../assets/portfolio/video/screencast/nai-screencast-after-vers-web.gif"),
         desc : "Tutoriel screencast : mise en place d'une animation SVG"
     },
 
     {
-        id : 4,
+        id : 3,
         nom : "Prise de vue",
         class : "p-courtMetrage",
-        src : "assets/video/smoothie/les-innocents.mp4",
-        gif : "assets/video/smoothie/les-innocents.gif",
+        src : require("../assets/portfolio/video/smoothie/les-innocents.mp4"),
+        gif : require("../assets/portfolio/video/smoothie/les-innocents.gif"),
         desc : "Court métrage le smoothie"
     }
     

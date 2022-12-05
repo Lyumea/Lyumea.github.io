@@ -8,7 +8,7 @@ transition : transform 1s;
 `;
 
 const Icon = styled.span`
-background-color : ${(props) => props.clicked ? "transparent" : "#f8f6f0"};
+background-color : ${(props) => props.clicked ? "transparent" : "var(--Licorice)"};
 margin-left : ${(props) => props.clicked ? "1.5rem" : "0"};
 @media screen and (max-width : 767px){
     margin-left : ${(props) => props.clicked ? "1rem" : "0"};

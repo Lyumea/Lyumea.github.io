@@ -1,27 +1,20 @@
 const portfolio3d = [
     {
         id : 1,
-        nom : "Logo 3D",
-        class : "p-logo3d",
-        src : "",
-        desc : "LogoNai en 3D"
+        nom : "My Little Litterature",
+        class : "ui-mll",
+        src : "https://prod.spline.design/rJ9yAIl46B4G3Acb/scene.splinecode",
+        desc : "Mockup du projet d'entrainement My Little Litterature"
     },
 
     {
         id : 2,
-        nom : "Illustrations 3D",
-        class : "p-illu3d",
-        src : "",
-        desc : ""
+        nom : "ETU'",
+        class : "ui-etu",
+        src : "https://prod.spline.design/R-DHVFmpakE9MPtw/scene.splinecode",
+        desc : "Mockup du projet d'entrainement ETU'"
     },
 
-    {
-        id : 3,
-        nom : "Interface UI 3D",
-        class : "p-ui3d",
-        src : "",
-        desc : ""
-    }
 ];
 
 export default portfolio3d;

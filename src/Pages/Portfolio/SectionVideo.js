@@ -1,8 +1,10 @@
 import portfolioVideo from "../../hooks/portfolioVideo";
 import Sections from "./Sections";
+import Videos from "../../components/portfolio/Videos"
+
 const SectionVideo = () => {
     return(
-        <Sections images={portfolioVideo} h1={"Vidéo"} />
+        <Sections content={<Videos />} images={portfolioVideo} h1={"Vidéo"} />
     )
 }
 export default SectionVideo;

@@ -46,9 +46,42 @@ const Slider = ({images}) => {
     setPopUp(false);
   }
 
+  //change de slide au swipe
+  const [touchStart, setTouchStart] = React.useState(0);
+  const [touchEnd, setTouchEnd] = React.useState(0);
+
+  const handleTouchStart = (e) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  }
+
+  const handleTouchMove = (e) => {
+      setTouchEnd(e.targetTouches[0].clientX);
+  }
+
+  const handleTouchEnd = () => {
+    if (touchStart - touchEnd > 200) {
+        // do your stuff here for left swipe
+        console.log("swipeRight")
+        goToPreviousSlide();
+    }
+
+    if (touchStart - touchEnd < -200) {
+        // do your stuff here for right swipe
+        console.log("swipeLeft");
+        goToNextSlide();
+    }
+  }
+
+  //change de slide au scroll
+  const handleWheel = (e) => {
+      // (e.deltaY > 0) ? console.log("scrollUp") : console.log("scrollDown");
+      // console.log(e.deltaY);
+    (e.deltaY > 0) ? goToNextSlide() : goToPreviousSlide();
+  }
+
     return (
-        <div className="slider">
-          {(popUp) ? <WpPopup slideCounter={wSlideCounter} close={setPopUpFalse} /> : null}
+        <div className="slider" onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd} onWheel={handleWheel} >
+          <WpPopup context={"web-project"} slideCounter={wSlideCounter} close={setPopUpFalse} state={popUp} />
           <div ref={slideImage} className="slider-bg"></div>
           <ul ref={slideNav} className="slider-navList">
                   {images.map((image) => (
@@ -60,7 +93,10 @@ const Slider = ({images}) => {
           <div className="slider--content container">
             <div className="slider--feature">
               <p className="date-wp">{images[wSlideCounter].date}</p>
-              <h1 ref={slideText} className="feature--title"> </h1>
+              <div className="feature--title">
+                <h1>Projet Web</h1>
+                <h2 ref={slideText} className="h1"> </h2>
+              </div>
              <img className="slider-logo" alt="" ref={slideLogo} />
               <p ref={slideDesc} className="feature--text"> </p>
              <ul className="slider-tech" ref={slideTech}></ul>

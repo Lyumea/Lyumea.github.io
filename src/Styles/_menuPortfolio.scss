@@ -67,19 +67,22 @@
       background: none;
       top: 5rem;
       border: .5px solid var(--Licorice);
-      color: var(--Licorice);
+      color: var(--WhitePearl);
       padding: .5rem 3rem;
       font-family: var(--Regular);
       overflow: hidden;
       z-index: 1;
       transition: all .3s ease-in-out;
+      background: linear-gradient(45deg, var(--Licorice), var(--MyGray));
+      background-size: 400% 400%;
+      animation: gradient 10s ease infinite;
 
       &::before{
-        content: '\2191';
+        content: '\2192';
         font-size: 1rem;
         position: absolute;
-        top: 100%;
-        left: 0;
+        top: -8%;
+        left: -100%;
         width: 100%;
         height: 100%;
         z-index: 0;
@@ -87,7 +90,7 @@
         background-size: 400% 400%;
         animation: gradient 10s ease infinite;
         transition: all .3s ease-in-out;
-        color: var(--Mint);
+        color: var(--WhitePearl);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -97,7 +100,8 @@
         color: var(--WhitePearl);
 
         &::before{
-          top: 0;
+          top: -8%;
+          left: 0;
           font-size: 2.5rem;
         }
       }
@@ -167,34 +171,51 @@
               display: flex;
               align-items: center;
               flex-direction: column;
-              h1{
+              .slider-main-title{
+                text-align: left;
+                position: absolute;
+                top: -7rem;
+                left: 0;
+                font-size: 2rem;
+                border-bottom: 1px solid var(--Licorice);
+                width: 25%;
+                padding-bottom: .5rem;
+
+                @include sm {
+                  font-size: 1.5rem;
+                  width: 80%;
+                }
+              
+              }
+
+              .h1{
                 border: .5px solid var(--Licorice);
-                padding: 2rem 20rem;
+                padding: 2rem 15rem;
                 @include md{
-                  padding: 2rem 15rem;
+                  padding: 2rem 5rem;
                 }
 
                 @include sm{
-                  padding: 2rem 10rem ;
+                  padding: 2rem 2rem ;
                 }
 
                 @include xs {
-                  padding: 2rem 5rem;
+                  padding: 1rem 1rem;
                 }
               }
 
               p{
-                position: absolute;
+                position: relative;
                 font-family: var(--Light);
                 text-align: center;
                 width: 100%;
-                top: 22vh;
-                @include sm {
-                  top: 18vh;
-                }
-                @include xs {
-                  top: 15vh;
-                }
+                top: 1rem;
+                // @include sm {
+                //   top: 18vh;
+                // }
+                // @include xs {
+                //   top: 15vh;
+                // }
               }
 
               ul{

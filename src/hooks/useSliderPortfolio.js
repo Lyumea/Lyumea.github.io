@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react';
 
 //utilisation des slides
-const useSliderPortfolio = (slideImage, slideText, slideDesc, slideTech, slideNav, slideLogo, images) => {
+const useSliderPortfolio = (slideImage, slideText, slideDesc, slideTech, slideNav, images) => {
     //initiation du state à reprendre si besoin
     let [pSlideCounter, setPSlideCounter] = useState(0);
 
@@ -37,7 +37,6 @@ const useSliderPortfolio = (slideImage, slideText, slideDesc, slideTech, slideNa
             slideDesc.current.innerHTML = images[slide].desc;
             slideTech.current.innerHTML = images[slide].tech.join('');
             slideNav.current.childNodes[slide].style.transition = `all .5s ease`;
-            slideLogo.current.src = images[slide].logo;
             
             animateSlide(slideImage)
     }
@@ -47,7 +46,6 @@ const useSliderPortfolio = (slideImage, slideText, slideDesc, slideTech, slideNa
         slideImage.current.classList.add("fade-in-down");
         slideText.current.classList.add("fade-in-out");
         slideTech.current.classList.add("fade-in-out");
-        slideLogo.current.classList.add("fade-in-out");
         slideDesc.current.style.opacity = "0";
 
         setTimeout( () => {
@@ -58,7 +56,6 @@ const useSliderPortfolio = (slideImage, slideText, slideDesc, slideTech, slideNa
         slideImage.current.classList.remove("fade-in-down");
         slideText.current.classList.remove("fade-in-out");
         slideTech.current.classList.remove("fade-in-out");
-        slideLogo.current.classList.remove("fade-in-out");
         slideDesc.current.style.opacity = "1";
         }, 1000)
 

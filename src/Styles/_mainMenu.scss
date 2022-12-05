@@ -10,9 +10,9 @@
     width : 5rem;
     cursor : pointer;
     z-index : 1000;
-    color: var(--WhitePearl);
-    border: solid var(--WhitePearl) 1px;
-    background-color: rgba($color: #96c8c5, $alpha: .5);
+    color: var(--Licorice);
+    border: solid var(--Licorice) 1px;
+    background-color: rgba($color: #f8f6f0, $alpha: .5);
     text-align: center;
     @include md{
         top : 3rem;
@@ -23,6 +23,10 @@
         right : 4rem;
         height : 4rem;
         width : 4rem;
+    }
+
+    .menu-icon::before, .menu-icon::after{
+        background-color: var(--Licorice);
     }
 
     &:hover{
