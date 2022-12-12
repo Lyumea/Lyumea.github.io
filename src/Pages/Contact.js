@@ -1,7 +1,8 @@
 import {useState} from "react";
-import plane from "../assets/img/icons/paper-plane-lin.svg";
+import plane from "../assets/img/icons/envoyer-message.svg";
 import { useForm } from "react-hook-form";
 import styled from "styled-components";
+import emailjs from '@emailjs/browser';
 
 const MyError = styled.p`
     color : var(--MyGray);
@@ -25,9 +26,18 @@ const Confirmed = styled.p`
 
 export default function Contact(){
 
+
     const [isSubmit, setIsSubmit] = useState(false);
     const { register, handleSubmit, formState:{ errors }} = useForm();
-    const onSubmit = data => {
+
+    const onSubmit = (data,e) => {
+        e.preventDefault();
+        emailjs.send('service_liyvlzh', 'template_vxxt6jk', {
+            user_name: data.Nom,
+            From_name: "NAI",
+            user_email: data.Mail,
+            message: data.Message,
+            }, '8HUrezcecj3xFKF2q');
         console.log(data);
         setIsSubmit(true)
     };
@@ -73,9 +83,8 @@ export default function Contact(){
                 </div>
 
                 <div>
-                    {/* <button><span> Envoyer </span></button> */}
-                    <button value="Envoyer" type="submit"> <span> Envoyer </span> <AirPlane clicked={isSubmit} src={plane} alt="icône d'avion" /> </button>
-                        {(isSubmit) ? <Confirmed  >Merci ! Je vais vous répondre dès que possible !</Confirmed> : <></>}
+                    <button value="Envoyer" type="submit" > <span> Envoyer </span> <AirPlane clicked={isSubmit} src={plane} alt="Enovyer votre message" /> </button>
+                    {(isSubmit) ? <Confirmed>Merci ! Je vais vous répondre dès que possible !</Confirmed> : <></>}
                 </div>
             </form>
         </div>
