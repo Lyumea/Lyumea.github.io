@@ -38,7 +38,6 @@ export default function Contact(){
             user_email: data.Mail,
             message: data.Message,
             }, '8HUrezcecj3xFKF2q');
-        console.log(data);
         setIsSubmit(true)
     };
 
