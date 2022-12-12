@@ -12,7 +12,8 @@
     z-index : 1000;
     color: var(--Licorice);
     border: solid var(--Licorice) 1px;
-    background-color: rgba($color: #f8f6f0, $alpha: .5);
+    background-color: var(--AlphaWhite);
+    backdrop-filter: blur(.5rem);
     text-align: center;
     @include md{
         top : 3rem;

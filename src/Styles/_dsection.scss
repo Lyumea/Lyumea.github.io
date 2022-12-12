@@ -25,7 +25,7 @@
         border: 1px solid var(--Licorice);
         padding: 1rem;
         transition: all .3s ease;
-        background-color: #f8f6f051;
+        background-color: var(--AlphaWhite);
         font-size: 1.15rem;
         @include sm {
             content: "";
@@ -54,7 +54,7 @@
         bottom: 5rem;
         -webkit-text-stroke: .1rem var(--MyGray);
         color: transparent;
-        background-color: #f8f6f051;
+        background-color: var(--AlphaWhite);
         backdrop-filter: blur(.5rem);
         padding: 1rem 1.5rem;
 

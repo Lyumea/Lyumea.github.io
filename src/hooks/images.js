@@ -1,7 +1,7 @@
 const images = [
     {   
         id : "01",
-        src : "https://cdn.discordapp.com/attachments/966254135601160212/967093443694313553/aud-bg.png",
+        src : require("../assets/projets-web/aud-bg.webp"),
         logo : "assets/svg/logo/aud/adopte-un-dechet-logo-couleur.svg",
         text : "Adopte un déchet",
         desc : "La bourse aux déchets est une plateforme mettant en relation deux particuliers ou professionnels afin de récupérer ou donner leur déchets sans avoir besoin de les jeter.",
@@ -17,7 +17,7 @@ const images = [
 
     {   
         id : "02",
-        src : "https://cdn.discordapp.com/attachments/966254135601160212/966634540640653312/so-fond.png",
+        src : require("../assets/projets-web/so-fond.webp"),
         logo : "assets/svg/logo/so/logo-symfony-online-blanc.svg",
         text : "symfony online",
         desc : "Symfony-Online est un site web développé sous Symfony. L’objectif est de simplifier la plateforme php à travers des tutoriels et astuces sous le format vidéo screencast.",
@@ -35,7 +35,7 @@ const images = [
 
     {   
         id: "03",
-        src : "https://cdn.discordapp.com/attachments/966254135601160212/966645037834330132/era-bg-2.png",
+        src : require("../assets/projets-web/era-fond.webp"),
         logo : "assets/svg/logo/era/logo.svg",
         text : "en recherche active",
         desc : "“En recherche active” est un site qui permet de soumettre facilement des profils de chercheurs d’emplois à la vue de recruteurs, et de les mettre en relation. Le projet est de faire la refonte du site qui a déjà été réalisé en 2021, et est actuellement accessible.",
@@ -51,7 +51,7 @@ const images = [
 
     {   
         id: "04",
-        src : "https://cdn.discordapp.com/attachments/966254135601160212/1036284835905425489/apsem-bg.png",
+        src : require("../assets/projets-web/apsem-fond.webp"),
         logo : "assets/svg/logo/apsem/apsem-logo.svg",
         text : "APSEM",
         desc : "L’APSEM (Association Socio-Educ Migrant) est une association formant vers un métier les personnes en difficultés. Le projet a pour but de mettre à jour la communication visuelle afin d’améliorer la visibilité de l’APSEM à en Occitanie. En effet, une modification de la charte graphique, un nouveau site internet, une représentation audiovisuelle ainsi qu’une campagne sur au moins un réseau social sont prioritaire.",

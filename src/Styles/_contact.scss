@@ -11,6 +11,16 @@
     justify-content: space-around;  
     align-items: center;
 
+    .contact-error{
+        animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+        margin-top: .5rem;
+        font-family: Aileron;
+        letter-spacing: 1px;
+        margin-bottom: 1rem;
+        text-align: right;
+    }
+
+
     @include sm{
         justify-content: space-between;  
     }
@@ -22,7 +32,7 @@
         align-items: center;
         width: 100%;
         z-index: 1;
-        div:first-child{
+        .contact-desc-container{
 
             h1{
                 position: relative;
@@ -45,15 +55,14 @@
                     margin-top: 5rem;
                 }
             }
-    
+
             p{
                 margin-top: 1rem;
-                font-family: Aileron-Thin;
+                font-family: var(--Thin);
                 letter-spacing: 1px;
                 margin-bottom: 1rem;
                 text-align: left;
             }
-
         }
     }
 
@@ -90,6 +99,7 @@
         border: none;
         border-bottom: 1px solid var(--Zomp);
         background: none;
+        overflow: hidden;
         &:focus{
             outline: none;
         }

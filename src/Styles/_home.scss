@@ -29,11 +29,14 @@
         @include md{
             font-size: 6rem;
             line-height: 15rem;
+            z-index: 1;
         }
 
         @include sm{
             font-size: 5rem;
             line-height: 20rem;
+            transform: translateY(0);
+            z-index: 1;
         }
     }
 

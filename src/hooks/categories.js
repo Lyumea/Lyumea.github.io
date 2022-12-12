@@ -3,7 +3,7 @@
         id : "01",
         text : "Graphisme",
         desc : "Logos, illustrations vectorielles ou bitmap",
-        src : "https://cdn.discordapp.com/attachments/966254135601160212/986613537130553384/idvisuel2.png",
+        src : require("../assets/portfolio/2d/illus/idvisuel.webp"),
         tech : [
             '<li> <img src="assets/svg/icons/adobe-illustrator.svg" alt="Icone du logiciel Adobe : Illustrator" /> </li>',
             '<li> <img src="assets/svg/icons/adobe-photoshop.svg" alt="Icone du logiciel Adobe : Photoshop" /> </li>'
@@ -15,7 +15,7 @@
         id : "02",
         text : "UI 3D",
         desc : "Prototypes 3D",
-        src : "https://cdn.discordapp.com/attachments/966254135601160212/966634540640653312/so-fond.png",
+        src : require("../assets/projets-web/so-fond.webp"),
         tech : ["Blender, Spline"],
         path: "/portfolio/ui"
     },

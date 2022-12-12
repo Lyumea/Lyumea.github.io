@@ -16,6 +16,7 @@ const MyContent = styled.div`
 
 
 const WpPopup = ({slideCounter, close, state}) => {
+    
     return(
         <MyArticle clicked={state} className="wp-popup" >
             <div className="wp-popup-close" onClick={close}></div>
@@ -24,9 +25,9 @@ const WpPopup = ({slideCounter, close, state}) => {
                 <h3 className="wp-popup-title">{webProjectList[slideCounter].title}</h3>
                 
                 <div className="popup-card-container">
-                    {webProjectList[slideCounter].src.map((link) => (
-                        <div key={webProjectList[slideCounter].src.indexOf(link)} className="popup-card">
-                            <img src={link} alt="" />
+                    {webProjectList[slideCounter].src.map((link, i) => (
+                        <div key={i} className="popup-card">
+                            <img src={link} alt={webProjectList[slideCounter].alt[webProjectList[slideCounter].src.indexOf(link)]} /> 
                         </div>
                     ))}
                 </div>

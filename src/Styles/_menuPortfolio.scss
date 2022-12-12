@@ -67,15 +67,14 @@
       background: none;
       top: 5rem;
       border: .5px solid var(--Licorice);
-      color: var(--WhitePearl);
+      color: var(--Licorice);
       padding: .5rem 3rem;
       font-family: var(--Regular);
       overflow: hidden;
       z-index: 1;
       transition: all .3s ease-in-out;
-      background: linear-gradient(45deg, var(--Licorice), var(--MyGray));
-      background-size: 400% 400%;
-      animation: gradient 10s ease infinite;
+      background: var(--AlphaBlack);
+      backdrop-filter: blur(.5rem);
 
       &::before{
         content: '\2192';
@@ -84,7 +83,7 @@
         top: -8%;
         left: -100%;
         width: 100%;
-        height: 100%;
+        height: 110%;
         z-index: 0;
         background: linear-gradient(45deg, var(--Licorice), var(--MyGray));
         background-size: 400% 400%;
