@@ -24,7 +24,6 @@ const PortfolioPopup = ({slideCounter, close, state}) => {
                 <h3 className="wp-popup-title">{PortfolioVideo[slideCounter].nom}</h3> */}
                 <video controls className="popup-video-container">
                     <source src={PortfolioVideo[slideCounter].webm} alt={PortfolioVideo[slideCounter].desc} type="video/webm" />
-                    <source src={PortfolioVideo[slideCounter].src} alt={PortfolioVideo[slideCounter].desc} type="video/mp4" />
                 </video>
             </MyContent>
         </MyArticle>
