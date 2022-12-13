@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import LogoNai from "../components/3d/logo/LogoNai";
 import Clouds from "./../components/Clouds";
 import "../Styles/_mixins.scss";
@@ -13,8 +13,13 @@ SwiperCore.use([Navigation]);
 
 
 const Home = () => {
-    const navigationPrevRef = React.useRef(null)
-    const navigationNextRef = React.useRef(null)
+    const navigationPrevRef = React.useRef(null);
+    const navigationNextRef = React.useRef(null);
+
+    useEffect(() => {
+        document.title = 'Accueil | NAI';
+    }, []);
+
 
         return(
             <header className="home-header">
@@ -45,8 +50,8 @@ const Home = () => {
                         <div className="img-clouds cloud2"></div>
                         <div className="img-clouds cloud1"></div>
                     </SwiperSlide>
-                    <div className="swiper-prev" ref={navigationPrevRef} />
-                    <div className="swiper-next" ref={navigationNextRef} />
+                    <div className="swiper-prev" ref={navigationPrevRef}><span>&#8592;</span> Accueil</div>
+                    <div className="swiper-next" ref={navigationNextRef}>À propos <span>&#8594;</span></div>
                     <Clouds boxShadow={3} cloudClassName="cloud home-cloud" />
                 </Swiper>
             </header>

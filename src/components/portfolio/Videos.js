@@ -19,7 +19,7 @@ const Videos = (link) => {
             { Object.values(link).map((lien, i) => (
                 <div key={i}>
                     <div className="video-button">
-                        <button onClick={setPopUpTrue}> Découvrir la vidéo </button>
+                        <button onClick={setPopUpTrue}> Découvrir la vidéo 	&#8594; </button>
                         <PortfolioPopup close={setPopUpFalse} slideCounter={lien.id-1} state={popUp} />
                     </div>
                     <img className="video-gif" src={lien.gif} alt={lien.desc} />

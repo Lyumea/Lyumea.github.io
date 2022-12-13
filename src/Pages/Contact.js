@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useState, useEffect} from "react";
 import plane from "../assets/img/icons/envoyer-message.svg";
 import { useForm } from "react-hook-form";
 import styled from "styled-components";
@@ -26,6 +26,9 @@ const Confirmed = styled.p`
 
 export default function Contact(){
 
+    useEffect(() => {
+        document.title = 'Me contacter | NAI';
+      }, []);
 
     const [isSubmit, setIsSubmit] = useState(false);
     const { register, handleSubmit, formState:{ errors }} = useForm();
@@ -53,7 +56,7 @@ export default function Contact(){
             <div className="container contact-form">
                 <div className="contact-desc-container">
                 <h1>Me Contacter</h1>
-                <p> Un projet ? Une demande ? Ou même juste un petit message ? Contactez-moi !  </p>
+                <p>Un projet ? Une demande ? Ou même un petit message ? Contactez-moi !</p>
             </div>
 
             <form onSubmit={handleSubmit(onSubmit)} >
@@ -66,7 +69,7 @@ export default function Contact(){
                 </div>
 
                 <div className="group">
-                    <input type="email" name="user_email" id="email" aria-label="votre adresse e-mail" {...register("Mail", { required: "Votre mail est obligatoire.", pattern: {value: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/, message:"Votre adresse email n'est pas valide"} })} aria-invalid={errors.mail ? "true" : "false"} />
+                    <input type="email" name="user_email" id="email" aria-label="votre adresse e-mail" {...register("Mail", { required: "Votre mail est obligatoire.", pattern: {value: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/, message:"Votre email n'est pas valide"}, maxLength: {value: "255", message: "Votre email n'est pas valide"} })} aria-invalid={errors.mail ? "true" : "false"} />
                     <span className="highlight"></span>
                     <span className="bar"></span>
                     <label htmlFor="email"> E-Mail </label>

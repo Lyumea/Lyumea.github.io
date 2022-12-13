@@ -69,8 +69,64 @@
             z-index: 1;
         }
 
-        .swiper-button-next{
+        .swiper-next{
+            display: block;
             position: absolute;
+            z-index: 5;
+            color: var(--Licorice);
+            bottom: 5rem;
+            cursor: pointer;
+            right: 5rem;
+            font-size: 1.25rem;
+            transition: all .5s ease;
+            span{
+                margin-left: .5rem;
+                transition: all .5s ease;
+            }
+
+            @include xs {
+                right: 1rem;
+                bottom: 2rem;
+            }
+
+            &:hover{
+                span{
+                    margin-left: 1rem;
+                }     
+            }
+        }
+
+        .swiper-prev{
+            display: block;
+            position: absolute;
+            z-index: 5;
+            color: var(--Licorice);
+            bottom: 5rem;
+            cursor: pointer;
+            font-size: 1.25rem;
+            transition: all .5s ease;
+            left: 5rem;
+
+            span{
+                margin-right: .5rem;
+                transition: all .5s ease;
+            }
+
+            @include xs {
+                left: 1rem;
+                bottom: 2rem;
+            }
+
+            &:hover{
+                span{
+                    margin-right: 1rem;
+                }     
+            }
+        }
+
+        .swiper-button-disabled{
+            opacity: 0;
+            cursor: none;
         }
 
         .container{
@@ -91,6 +147,9 @@
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%);
+                z-index: 2;
+                background-color: var(--AlphaBG);
+                backdrop-filter: blur(1rem);
                 @include sm{
                     top: 5rem;
                     transform: translateY(0);
@@ -114,7 +173,7 @@
                 
                 img{
                     position: absolute;
-                    right: -5rem;
+                    right: -10rem;
                     bottom: 0;
                     width: 30rem;
 

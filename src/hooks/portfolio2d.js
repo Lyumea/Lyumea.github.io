@@ -84,7 +84,7 @@ const portfolio2d = [
         {
             id : 3,
             miniature : "illu-test",
-            src : require("../assets/portfolio/2d/illus/default.webp"),
+            src : require("../assets/portfolio/2d/illus/autoportrait-nai.webp"),
             title: "Autoportrait",
             description : "Autoportrait de NAI"
         },
