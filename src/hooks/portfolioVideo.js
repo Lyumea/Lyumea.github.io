@@ -24,7 +24,7 @@ const portfolioVideo = [
         class : "p-courtMetrage",
         webm : require("../assets/portfolio/video/smoothie/court-metrage-les-innocents.webm"),
         gif : require("../assets/portfolio/video/smoothie/les-innocents.gif"),
-        desc : "Court métrage le smoothie"
+        desc : "Court métrage les innocents"
     }
     
 ];

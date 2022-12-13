@@ -61,21 +61,17 @@ const Slider = ({images}) => {
   const handleTouchEnd = () => {
     if (touchStart - touchEnd > 200) {
         // do your stuff here for left swipe
-        console.log("swipeRight")
         goToPreviousSlide();
     }
 
     if (touchStart - touchEnd < -200) {
         // do your stuff here for right swipe
-        console.log("swipeLeft");
         goToNextSlide();
     }
   }
 
   //change de slide au scroll
   const handleWheel = (e) => {
-      // (e.deltaY > 0) ? console.log("scrollUp") : console.log("scrollDown");
-      // console.log(e.deltaY);
     (e.deltaY > 0) ? goToNextSlide() : goToPreviousSlide();
   }
 
