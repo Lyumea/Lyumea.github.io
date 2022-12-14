@@ -12,6 +12,7 @@
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
     "@types/three": "^0.137.0",
+    "gh-pages": "^4.0.0",
     "loader-utils": "^3.2.1",
     "node-fetch": "^3.3.0",
     "nth-check": "^2.1.1",
@@ -30,7 +31,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-   "deploy": "main -d build",
+    "deploy": "gh-pages -b master -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
