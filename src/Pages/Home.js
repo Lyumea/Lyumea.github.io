@@ -40,7 +40,7 @@ const Home = () => {
                     mousewheel
                 >
                     <SwiperSlide className="home-swiper">
-                        <h1 className="home-main-title"> NAI • Creative</h1>
+                        <h1 className="home-main-title"> NAI • Design</h1>
                         <LogoNai />
                         <div className="img-clouds cloud1"></div>
                         <Clouds boxShadow={1} cloudClassName="cloud home-cloud" />
