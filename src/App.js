@@ -19,7 +19,6 @@ function App() {
     <div className="App">
       
       <Menu />
-
       <Routes>
         <Route path="/" element={ <Home /> } />
         <Route path="/web-projects" element={ <MenuWebProject /> } />
