@@ -17,7 +17,6 @@ import SectionVideo from './Pages/Portfolio/SectionVideo';
 function App() {
   return (
     <div className="App">
-      
       <Menu />
       <Routes>
         <Route path="/" element={ <Home /> } />
@@ -29,7 +28,6 @@ function App() {
         <Route path="/portfolio/video" element={ <SectionVideo /> } />
         <Route path="/contact" element={ <Contact /> } />
       </Routes>
-
     </div>
   );
 }
