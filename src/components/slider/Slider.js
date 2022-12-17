@@ -46,37 +46,13 @@ const Slider = ({images}) => {
     setPopUp(false);
   }
 
-  //change de slide au swipe
-  const [touchStart, setTouchStart] = React.useState(0);
-  const [touchEnd, setTouchEnd] = React.useState(0);
-
-  const handleTouchStart = (e) => {
-    setTouchStart(e.targetTouches[0].clientX);
-  }
-
-  const handleTouchMove = (e) => {
-      setTouchEnd(e.targetTouches[0].clientX);
-  }
-
-  const handleTouchEnd = () => {
-    if (touchStart - touchEnd > 200) {
-        // do your stuff here for left swipe
-        goToPreviousSlide();
-    }
-
-    if (touchStart - touchEnd < -200) {
-        // do your stuff here for right swipe
-        goToNextSlide();
-    }
-  }
-
   //change de slide au scroll
   const handleWheel = (e) => {
     (e.deltaY > 0) ? goToNextSlide() : goToPreviousSlide();
   }
 
     return (
-        <div className="slider" onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd} onWheel={handleWheel} >
+        <div className="slider" onWheel={handleWheel} >
           <WpPopup context={"web-project"} slideCounter={wSlideCounter} close={setPopUpFalse} state={popUp} />
           <div ref={slideImage} className="slider-bg"></div>
           <ul ref={slideNav} className="slider-navList">

@@ -18,37 +18,13 @@ const SliderPortfolio = ({categories}) =>{
     categories
   );
 
-  //change de slide au swipe
-  const [touchStart, setTouchStart] = React.useState(0);
-  const [touchEnd, setTouchEnd] = React.useState(0);
-
-  const handleTouchStart = (e) => {
-    setTouchStart(e.targetTouches[0].clientX);
-  }
-
-  const handleTouchMove = (e) => {
-      setTouchEnd(e.targetTouches[0].clientX);
-  }
-
-  const handleTouchEnd = () => {
-    if (touchStart - touchEnd > 200) {
-      // do your stuff here for left swipe
-      goToNextSlide();
-    }
-
-    if (touchStart - touchEnd < -200) {
-      // do your stuff here for right swipe
-      goToPreviousSlide();
-    }
-  }
-
   const handleWheel = (e) => {
     (e.deltaY > 0) ? goToNextSlide() : goToPreviousSlide();
   }
 
 
   return(
-    <div className="slider" onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd} onWheel={handleWheel}>
+    <div className="slider"  onWheel={handleWheel}>
       {/*Image de fond*/}
       <div ref={slideImage} className="slider-bg"></div>
       {/*Navigation du slider WEB*/}
