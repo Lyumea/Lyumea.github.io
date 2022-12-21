@@ -52,7 +52,7 @@ const Home = () => {
                     </SwiperSlide>
                     <div className="swiper-prev" ref={navigationPrevRef}><span>&#8592;</span> Accueil</div>
                     <div className="swiper-next" ref={navigationNextRef}>À propos <span>&#8594;</span></div>
-                    <Clouds boxShadow={3} cloudClassName="cloud home-cloud" />
+                    <Clouds boxShadow={2} cloudClassName="cloud home-cloud" />
                 </Swiper>
             </header>
         )
