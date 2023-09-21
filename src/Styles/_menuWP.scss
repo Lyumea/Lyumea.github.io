@@ -25,9 +25,6 @@
             top :0;
             right: 0;
             transform: translate(25rem);
-            @include sm{
-                display: none !important;
-            }
         }
 
 
@@ -246,11 +243,11 @@
             width: 5rem;
             height: 5rem;
             border-radius: 100rem;
-            border: 1px solid var(--Licorice);
-            // background-color: #33999951;
+            border: none;
             font-size: 1.5rem;
             cursor: pointer;
             transition: all .3s ease;
+            background: none;
 
             @include sm{
                 display:  block;

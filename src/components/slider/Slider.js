@@ -1,4 +1,4 @@
-import React, {useRef, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import useSlider from "../../hooks/useSlider";
 import AudUI from "../3d/interface/aud/AudUI";
 import ApsemUI from "../3d/interface/apsem/ApsemUI";
@@ -35,6 +35,22 @@ const Slider = ({images}) => {
     );
 
   const [popUp, setPopUp] = useState(false);
+
+  const [windowSize, setWindowSize] = useState(window.innerWidth);
+
+  useEffect(() => {
+
+    const handleWindowResize = () => {
+        setWindowSize(window.innerWidth);
+      };
+  
+      window.addEventListener('resize', handleWindowResize);
+  
+      return () => {
+        window.removeEventListener('resize', handleWindowResize);
+      };
+
+}, []);
 
 
   //active la modale
@@ -84,7 +100,7 @@ const Slider = ({images}) => {
           </button>
           {/* <DefaultUI scene={images[wSlideCounter].scene} /> */}
           
-          <ChooseSpline counter={wSlideCounter} />
+          { (windowSize >= 767) && <ChooseSpline counter={wSlideCounter} /> }
         </div>
       )
 }

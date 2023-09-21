@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import LogoNai from "../components/3d/logo/LogoNai";
 import Clouds from "./../components/Clouds";
 import "../Styles/_mixins.scss";
@@ -8,6 +8,8 @@ import Apropos from "../components/Apropos";
 // Import Swiper styles
 import "swiper/css";
 import 'swiper/css/navigation';
+//Mobile Version
+import Loading from "../components/basic/Loading";
 
 SwiperCore.use([Navigation]);
 
@@ -16,8 +18,21 @@ const Home = () => {
     const navigationPrevRef = React.useRef(null);
     const navigationNextRef = React.useRef(null);
 
+    const [windowSize, setWindowSize] = useState(window.innerWidth);
+
     useEffect(() => {
         document.title = 'Accueil | NAI';
+
+        const handleWindowResize = () => {
+            setWindowSize(window.innerWidth);
+          };
+      
+          window.addEventListener('resize', handleWindowResize);
+      
+          return () => {
+            window.removeEventListener('resize', handleWindowResize);
+          };
+
     }, []);
 
 
@@ -41,7 +56,10 @@ const Home = () => {
                 >
                     <SwiperSlide className="home-swiper">
                         <h1 className="home-main-title"> NAI • Design</h1>
-                        <LogoNai />
+                        {/*<LogoNai />
+                        <Loading />*/}
+                        { (windowSize >= 767 ) ? <LogoNai /> : <Loading /> }
+                        {/* console.log(windowSize) */}
                         <div className="img-clouds cloud1"></div>
                         <Clouds boxShadow={1} cloudClassName="cloud home-cloud" />
                     </SwiperSlide>
