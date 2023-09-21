@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.c0093b8a.css",
-    "main.js": "/static/js/main.f34955a5.js",
+    "main.css": "/static/css/main.5e9ae921.css",
+    "main.js": "/static/js/main.9db971b9.js",
     "static/js/227.aff8e432.chunk.js": "/static/js/227.aff8e432.chunk.js",
     "static/js/526.bfb1337c.chunk.js": "/static/js/526.bfb1337c.chunk.js",
     "static/js/232.3992674c.chunk.js": "/static/js/232.3992674c.chunk.js",
@@ -20,6 +20,7 @@
     "static/media/logo.gltf": "/static/media/logo.739eb2b497d7424e8d67.gltf",
     "static/media/batkachu.webp": "/static/media/batkachu.eddd3ab3dcb79325768c.webp",
     "static/media/cloud1.png": "/static/media/cloud1.deebc7b5ced3c8ad3222.png",
+    "static/media/logo-nai-blanc.svg": "/static/media/logo-nai-blanc.d95815748079a509d1c3599d5940a258.svg",
     "static/media/so-fond.webp": "/static/media/so-fond.48e3c4f692db45fcd5c6.webp",
     "static/media/cdv-nai.webp": "/static/media/cdv-nai.6e9b7c8bec32275f02bc.webp",
     "static/media/nai-book-open.webp": "/static/media/nai-book-open.7334b9494138a2fcee35.webp",
@@ -45,8 +46,8 @@
     "static/media/logoVAS.webp": "/static/media/logoVAS.1d8b35b299fc6abe47db.webp",
     "index.html": "/index.html",
     "static/media/envoyer-message.svg": "/static/media/envoyer-message.48875a5ce7def129ba5db97b3db87f5e.svg",
-    "main.c0093b8a.css.map": "/static/css/main.c0093b8a.css.map",
-    "main.f34955a5.js.map": "/static/js/main.f34955a5.js.map",
+    "main.5e9ae921.css.map": "/static/css/main.5e9ae921.css.map",
+    "main.9db971b9.js.map": "/static/js/main.9db971b9.js.map",
     "227.aff8e432.chunk.js.map": "/static/js/227.aff8e432.chunk.js.map",
     "526.bfb1337c.chunk.js.map": "/static/js/526.bfb1337c.chunk.js.map",
     "232.3992674c.chunk.js.map": "/static/js/232.3992674c.chunk.js.map",
@@ -54,7 +55,7 @@
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c0093b8a.css",
-    "static/js/main.f34955a5.js"
+    "static/css/main.5e9ae921.css",
+    "static/js/main.9db971b9.js"
   ]
 }
