@@ -38,7 +38,7 @@ const images = [
         src : require("../assets/projets-web/era-fond.webp"),
         logo : "assets/svg/logo/era/logo.svg",
         text : "en recherche active",
-        desc : "“En recherche active” est un site qui permet de soumettre facilement des profils de chercheurs d’emplois à la vue de recruteurs, et de les mettre en relation. Le projet est de faire la refonte du site qui a déjà été réalisé en 2021, et est actuellement accessible.",
+        desc : "“En recherche active” est un site qui permet de soumettre facilement des profils de chercheurs d’emplois à la vue de recruteurs, et de les mettre en relation. Le projet est de faire la refonte du site qui a déjà été réalisé en 2021.",
         tech : [
             '<li> <img src="assets/svg/icons/vuejs.svg" /> </li>',
             '<li> <img src="assets/svg/icons/sass.svg" /> </li>',
