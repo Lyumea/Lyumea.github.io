@@ -1,7 +1,6 @@
 /* Page d'accueil */
 @import "mixins";
 
-
 .home-header{
     display: flex;
     flex-direction: column;
@@ -9,6 +8,7 @@
     background-color: mix( #339999, #f8f6f0, 50%);
     height: 100vh;
     animation: appear 1s linear;
+    overflow: hidden;
 
     .home-main-title{
         color: mix( #339999, #f8f6f0, 50%);
@@ -170,17 +170,14 @@
             }
 
             .apropos-img{
-                
                 img{
                     position: absolute;
                     right: -10rem;
                     bottom: 0;
                     width: 30rem;
-
                     @include sm{
                         bottom: -10rem;
                     }
-
                     @include xs{
                         bottom: -20rem;
                     }
@@ -188,6 +185,4 @@
             }
         }
     }
-
-
 }

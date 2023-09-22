@@ -18,9 +18,7 @@ const Home = () => {
 
     useEffect(() => {
         document.title = 'Accueil | NAI';
-
         const handleWindowResize = () => {setWindowSize(window.innerWidth);};
-      
         window.addEventListener('resize', handleWindowResize);
       
         return () => {
@@ -28,7 +26,6 @@ const Home = () => {
         };
 
     }, []);
-
 
     return(
         <header className="home-header">
@@ -49,7 +46,7 @@ const Home = () => {
                 mousewheel
             >
                 <SwiperSlide className="home-swiper">
-                    <h1 className="home-main-title"> NAI • Design</h1>
+                    <h1 className="home-main-title">NAI Design</h1>
                     {(windowSize >= 767 ) ? <LogoNai /> : <Loading />}
                     <div className="img-clouds cloud1"></div>
                 </SwiperSlide>

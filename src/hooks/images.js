@@ -54,7 +54,7 @@ const images = [
         src : require("../assets/projets-web/apsem-fond.webp"),
         logo : "assets/svg/logo/apsem/apsem-logo.svg",
         text : "APSEM",
-        desc : "L’APSEM (Association Socio-Educ Migrant) est une association formant vers un métier les personnes en difficultés. Le projet a pour but de mettre à jour la communication visuelle afin d’améliorer la visibilité de l’APSEM à en Occitanie. En effet, une modification de la charte graphique, un nouveau site internet, une représentation audiovisuelle ainsi qu’une campagne sur au moins un réseau social sont prioritaire.",
+        desc : "L’APSEM (Association Socio-Educ Migrant) est une association formant vers un métier les personnes en difficultés. Le projet a pour but de mettre à jour la communication visuelle afin d’améliorer la visibilité de l’APSEM à en Occitanie.",
         tech : [
             '<li> <img src="assets/svg/icons/adobe-photoshop.svg" /> </li>',
             '<li> <img src="assets/svg/icons/adobe-illustrator.svg" /> </li>',
