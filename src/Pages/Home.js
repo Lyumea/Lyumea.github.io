@@ -53,6 +53,7 @@ const Home = () => {
                 <SwiperSlide>
                     <Apropos />
                     <div className="img-clouds cloud2"></div>
+                    <div className="img-clouds cloud2"></div>
                     <div className="img-clouds cloud1"></div>
                 </SwiperSlide>
                 <div className="swiper-prev" ref={navigationPrevRef}><span>&#8592;</span> Accueil</div>
