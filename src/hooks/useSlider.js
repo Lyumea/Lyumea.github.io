@@ -48,11 +48,11 @@ const useSlider = (slideImage, slideText, slideDesc, slideTech, slideNav, slideL
         slideText.current.classList.add("fade-in-out");
         slideTech.current.classList.add("fade-in-out");
         slideLogo.current.classList.add("fade-in-out");
-        slideDesc.current.style.opacity = "0";
+        slideDesc.current.classList.add("fadeIn");
 
         //fin d'animation dans les 0.5s
         // setTimeout( () => {
-        //     slideDesc.current.classList.add("fade-in-out");
+        //     slideDesc.current.style.opacity = "1";
         // },500 )
 
         //fin d'animation dans les 1s
@@ -61,7 +61,7 @@ const useSlider = (slideImage, slideText, slideDesc, slideTech, slideNav, slideL
         slideText.current.classList.remove("fade-in-out");
         slideTech.current.classList.remove("fade-in-out");
         slideLogo.current.classList.remove("fade-in-out");
-        slideDesc.current.style.opacity = "1";
+        slideDesc.current.classList.remove("fadeIn");
         }, 1000)
 
         //fin d'animation dans les 2s

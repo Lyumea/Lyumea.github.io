@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import autoprotrait from "../assets/portfolio/2d/illus/autoportrait-nai.webp"
 
 const Apropos = () =>{
@@ -7,7 +8,8 @@ const Apropos = () =>{
                 <div className="apropos">
                     <div className="apropos-text">
                         <h2>NAI</h2>
-                        <p>Ces lettres sont mes initiales. En effet, cela fait maintenant 2 ans que j’exerce dans le métier du design WEB et du design UX/UI en alternance. Grâce à cette expérience et à ma curiosité, j’ai pu apprendre de nombreuses technologies en programmation et en créativité. Je suis actuellement en alternance pour le titre professionnel Designer UX/UI et je souhaite continuer dans ce domaine à l’avenir…</p>
+                        <p>Après avoir fait 2 ans d'expérience dans le métier du design WEB et du design UX/UI, il est grand temps de mettre ces services à l'ouvrage! Grâce à cette expérience et à ma curiosité, j’ai pu apprendre de nombreuses technologies en programmation et en créativité.
+                            Je pourrai alors vous aider dans votre communication visuel, votre stratégie marketing et la promotion de votre produit et de votre service. Vous voulez en savoir plus ? Vous pouvez voir mon Portfolio ou parlons-en m'envoyant <div><Link to="/contact">un petit message !</Link></div></p>
                     </div>
 
                     <div className="apropos-img">

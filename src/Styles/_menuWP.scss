@@ -155,6 +155,7 @@
                     line-height: 1.5rem;
                     background-color: rgba(248, 246, 240, 0.4);
                     backdrop-filter: blur(.5rem);
+                    transition: all .1s ease-in;
 
 
                     @include sm {

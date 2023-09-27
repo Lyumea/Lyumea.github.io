@@ -159,20 +159,57 @@
                 }
                 p{
                     font-family: var(--Light);
+                    div{
+                        display: inline-block;
+                    }
+                    a{
+                        position: relative;
+                        text-decoration: none;
+                        color: var(--Licorice);
+                        transition: all .2s ease-in-out;
+
+                        
+                        &::before{
+                            transition: all .2s ease-in-out;
+                            content: "";
+                            position: absolute;
+                            width: 120%;
+                            height: .5rem;
+                            background-color: var(--Zomp);
+                            transform: translateY(1rem);
+                            z-index: -1;
+
+                            @include sm{
+                                width: 100%;
+                            }
+                        }
+
+                        
+
+                        &:hover{
+                            &::before{
+                                transform: translateY(.5rem);
+                                background-color: var(--Mint);
+                                width: 100%;
+                            }
+                        }
+                    }
+                    
                 }
             }
 
             .apropos-img{
+
                 img{
                     position: absolute;
                     right: -10rem;
                     bottom: 0;
                     width: 30rem;
                     @include sm{
-                        bottom: -10rem;
+                        bottom: -15rem;
                     }
                     @include xs{
-                        bottom: -20rem;
+                        right: -5rem;
                     }
                 }
             }
