@@ -159,21 +159,22 @@
                 }
                 p{
                     font-family: var(--Light);
-                    div{
-                        display: inline-block;
-                    }
+                    
                     a{
                         position: relative;
                         text-decoration: none;
                         color: var(--Licorice);
                         transition: all .2s ease-in-out;
+                        display: inline-block;
 
                         
                         &::before{
                             transition: all .2s ease-in-out;
                             content: "";
                             position: absolute;
-                            width: 120%;
+                            
+                            top: 0;
+                            width: 110%;
                             height: .5rem;
                             background-color: var(--Zomp);
                             transform: translateY(1rem);
