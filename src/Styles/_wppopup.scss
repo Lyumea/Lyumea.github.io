@@ -120,6 +120,8 @@
             margin: 10vmin;
             height: 70vh;
             overflow: hidden;
+            overflow-y: scroll;
+
 
             @include sm{
                 display: grid;

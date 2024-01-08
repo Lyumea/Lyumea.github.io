@@ -62,10 +62,16 @@ const Slider = ({images}) => {
     setPopUp(false);
   }
 
+  // const handlekeyDown = (e) => {
+  //   console.log(e.key)
+  //   if(e.key === "ArrowDown") console.log("arrowDown");
+  //   else if(e.key === "ArrowUp") console.log("arrowUp");
+  // }
+
   //change de slide au scroll
-  const handleWheel = (e) => {
-    (e.deltaY > 0) ? goToNextSlide() : goToPreviousSlide();
-  }
+  // const handleWheel = (e) => {
+  //   (e.deltaY > 0) ? goToNextSlide() : goToPreviousSlide();
+  // }
 
   const [touchStart, setTouchStart] = useState(null)
   const [touchEnd, setTouchEnd] = useState(null)
@@ -86,12 +92,11 @@ const Slider = ({images}) => {
     const isLeftSwipe = distance > minSwipeDistance
     const isRightSwipe = distance < -minSwipeDistance
     if (isLeftSwipe || isRightSwipe) isLeftSwipe ? goToNextSlide() : goToPreviousSlide()
-    // add your conditional logic here
   }
 
     return (
-        <div onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd} className="slider" onWheel={handleWheel} >
-          <WpPopup context={"web-project"} slideCounter={wSlideCounter} close={setPopUpFalse} state={popUp} />
+        <div onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd} className="slider">
+          <WpPopup  context={"web-project"} slideCounter={wSlideCounter} close={setPopUpFalse} state={popUp} />
           <div ref={slideImage} className="slider-bg"></div>
           <ul ref={slideNav} className="slider-navList">
                   {images.map((image) => (

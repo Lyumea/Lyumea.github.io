@@ -19,6 +19,9 @@
         position: relative;
         width: 100%;
         height: 100vh;
+        &:focus{
+            outline: none;
+        }
 
         .aud-spline{
             position: absolute;
