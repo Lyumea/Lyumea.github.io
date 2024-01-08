@@ -22,6 +22,7 @@ const PortfolioPopup = ({slideCounter, close, state}) => {
             <MyContent clicked={state} className="wp-window-video">
                 {/* <button className="wp-button-popup" onClick={close}> <span className="wp-button-popup-close"> fermer </span> </button>
                 <h3 className="wp-popup-title">{PortfolioVideo[slideCounter].nom}</h3> */}
+                <button className="video-close-popup" onClick={close} alt="fermer la vidéo"> X </button>
                 <video controls className="popup-video-container">
                     <source src={PortfolioVideo[slideCounter].webm} alt={PortfolioVideo[slideCounter].desc} type="video/webm" />
                 </video>

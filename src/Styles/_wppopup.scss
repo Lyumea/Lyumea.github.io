@@ -168,14 +168,40 @@
     }
 }
 
+
+
 .video-container{
     .wp-window-video{
+        position: relative;
         width: 45%;
         height: 45%;
 
         @include sm {
             width: 100%;
             height: 100%;
+        }
+    }
+
+    .video-close-popup{
+        position: absolute;
+        border-radius: 100vw;
+        top: -55vh;
+        right: 1vw;
+        background-color: var(--Aileron) !important;
+        color: var(--WhitePearl) !important;
+        border-color: var(--WhitePearl) !important;
+        display: none;
+
+        @include sm{
+            display: block;
+            top: -30vh;
+            z-index: 10;
+            right: -2dvw;
+        }
+
+        @include xs{
+            display: block;
+            top: -15vh;
         }
     }
 
