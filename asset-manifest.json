@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.2e794afe.css",
+    "main.css": "/static/css/main.f041c8ec.css",
     "main.js": "/static/js/main.60ba5007.js",
     "static/js/227.aff8e432.chunk.js": "/static/js/227.aff8e432.chunk.js",
     "static/js/526.bfb1337c.chunk.js": "/static/js/526.bfb1337c.chunk.js",
@@ -46,7 +46,7 @@
     "static/media/logoVAS.webp": "/static/media/logoVAS.1d8b35b299fc6abe47db.webp",
     "index.html": "/index.html",
     "static/media/envoyer-message.svg": "/static/media/envoyer-message.48875a5ce7def129ba5db97b3db87f5e.svg",
-    "main.2e794afe.css.map": "/static/css/main.2e794afe.css.map",
+    "main.f041c8ec.css.map": "/static/css/main.f041c8ec.css.map",
     "main.60ba5007.js.map": "/static/js/main.60ba5007.js.map",
     "227.aff8e432.chunk.js.map": "/static/js/227.aff8e432.chunk.js.map",
     "526.bfb1337c.chunk.js.map": "/static/js/526.bfb1337c.chunk.js.map",
@@ -55,7 +55,7 @@
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2e794afe.css",
+    "static/css/main.f041c8ec.css",
     "static/js/main.60ba5007.js"
   ]
 }
