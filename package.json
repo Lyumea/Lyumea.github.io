@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://lyumea.github.io",
+  "homepage": "https://nai-design.com",
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
     "@jridgewell/sourcemap-codec": "^1.4.14",
