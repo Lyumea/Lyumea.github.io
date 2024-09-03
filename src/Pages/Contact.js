@@ -35,7 +35,7 @@ export default function Contact(){
 
     const onSubmit = (data,e) => {
         e.preventDefault();
-        emailjs.send('service_liyvlzh', 'template_vxxt6jk', {
+        emailjs.send('service_z3jyyhr', 'template_vxxt6jk', {
             user_name: data.Nom,
             From_name: "NAI",
             user_email: data.Mail,
